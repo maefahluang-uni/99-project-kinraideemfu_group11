@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(/src/main/frontend/font/PK\ Uttaradit-Medium.ttf);
+}
+
+header {
+    background-color: #dd0000;
+    color: #e50000;
+    padding: 0px 100px ;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-style: solid;
+    
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.Picture_01{
+    width: 150px;
+    height: 100px;
+    margin-left: -2cm;
+}
+
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+
+.search-bar {
+    margin-left: 10cm;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-dropdown {
+    position: relative;
+    margin-left: 20px;
+}
+
+.profile-dropdown button {
+    padding: 5px 10px;
+    background-color: #ffa12f;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffa12f;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+}
+
+.profile-menu li {
+    margin: 0;
+}
+
+.profile-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.profile-menu a:hover {
+    background-color: #555;
+}
+
+
+.profile-dropdown:hover .profile-menu {
+    display: block;
+}
