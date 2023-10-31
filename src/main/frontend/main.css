@@ -11,7 +11,7 @@ body {
 header {
     background-color: #dd0000;
     color: #e50000;
-    padding: 0px 100px ;
+    padding: 0px 100px;
 
 }
 
@@ -23,7 +23,7 @@ nav {
     margin: 0 auto;
     padding: 0 20px;
     border-style: solid;
-    
+
 }
 
 
@@ -31,7 +31,8 @@ nav {
     font-size: 24px;
     font-weight: bold;
 }
-.Picture_01{
+
+.Picture_01 {
     width: 150px;
     height: 100px;
     margin-left: -2cm;
@@ -110,3 +111,101 @@ button {
 .profile-dropdown:hover .profile-menu {
     display: block;
 }
+
+.container {
+    padding: 1rem;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.grid {
+    margin-bottom: 3rem;
+    margin-left: 9.5rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* Adjust the number of columns for smaller screens */
+    grid-template-areas:
+        'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';
+    ;
+}
+
+.container-box-food,
+.container-box-desert,
+.container-box-drink {
+    height: 150px;
+    width: 300px;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    /* Make boxes full width on smaller screens */
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.container-box-food:hover,
+.container-box-desert:hover,
+.container-box-drink:hover {
+    box-shadow: 0 1rem 3rem -0.75rem #FF9967;
+    /* Change the box-shadow color to red on hover */
+    transition: box-shadow 0.3s;
+    /* Add a smooth transition effect */
+}
+
+/* Adjust styles for screens narrower than 768px */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+        /* Adjust the number of columns for smaller screens */
+        grid-template-areas:
+            'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';
+        ;
+    }
+
+    .container-box-food,
+    .container-box-desert,
+    .container-box-drink {
+        margin: 1rem;
+        /* Add some margin for better spacing on smaller screens */
+    }
+}
+
+.container-box-food {
+    background-image: url(https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&q=80&w=1885&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    grid-area: container-box-food;
+}
+
+.container-box-desert {
+    background-image: url(https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    grid-area: container-box-desert;
+}
+
+.container-box-drink {
+    background-image: url(https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    grid-area: container-box-drink;
+}
+
+h1 {
+    margin-left: 8rem;
+    font-size: 25px;
+}
+
+/*grid-template-areas:
+        'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';
