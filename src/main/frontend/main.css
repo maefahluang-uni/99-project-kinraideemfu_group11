@@ -3,10 +3,11 @@ body {
     padding: 0;
 }
 
+
 @font-face {
     font-family: myFirstFont;
     src: url(/src/main/frontend/font/PK\ Uttaradit-Medium.ttf);
-}
+}  
 
 header {
     background-color: #dd0000;
@@ -26,6 +27,19 @@ nav {
 
 }
 
+
+.footer {
+    background-color: #FF9967; 
+    color: #fff;  
+    text-align: center;
+    padding: 20px; 
+    width: 500px;
+}
+
+.Picture_02 {
+    width: 150px;
+    height: 100px;
+}
 
 .logo {
     font-size: 24px;
@@ -138,14 +152,15 @@ button {
     object-fit: cover;
 }
 
-.grid {
+.grid_layer {
     margin-bottom: 3rem;
     margin-left: 9.5rem;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     /* Adjust the number of columns for smaller screens */
     grid-template-areas:
-        'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';
+        'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink'
+        'logo2 About_me About_me Hel_p Follo_w Follo_w';
     ;
 }
 
@@ -171,11 +186,12 @@ button {
 
 /* Adjust styles for screens narrower than 768px */
 @media (max-width: 768px) {
-    .grid {
+    .grid_layer {
         grid-template-columns: repeat(6, 1fr);
         /* Adjust the number of columns for smaller screens */
         grid-template-areas:
-            'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';
+            'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink'
+            'logo2 About_me About_me Hel_p Follo_w Follo_w';
         ;
     }
 
@@ -207,5 +223,18 @@ h1 {
     font-size: 25px;
 }
 
-/*grid-template-areas:
-        'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';
+.logo2{
+    grid-area: logo2;
+}
+
+.About_me{
+    grid-area: About_me;
+}
+
+.Hel_p{
+    grid-area: Hel_p;
+}
+
+.Follo_w{
+    grid-area: Follo_w;
+}
