@@ -140,13 +140,19 @@ button {
 
 .grid {
     margin-bottom: 3rem;
-    margin-left: 9.5rem;
+
     display: grid;
+    margin: 1rem 0rem 2rem 2rem;
     grid-template-columns: repeat(6, 1fr);
+    row-gap: 1rem;
     /* Adjust the number of columns for smaller screens */
     grid-template-areas:
-        'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';
-    ;
+        'menutag menutag menutag menutag menutag menutag'
+        'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink'
+        'rating_tag rating_tag rating_tag rating_tag rating_tag rating_tag'
+        'rating-box1 rating-box2 rating-box3 rating-box4 rating-box5 rating-box6';
+
+
 }
 
 .container-box-food,
@@ -157,12 +163,32 @@ button {
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
     /* Make boxes full width on smaller screens */
     background-size: cover;
+    border-radius: 10px;
+}
+
+.rating-box1,
+.rating-box2,
+.rating-box3,
+.rating-box4,
+.rating-box5,
+.rating-box6 {
+    height: 100px;
+    width: 200px;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    /* Make boxes full width on smaller screens */
+    background-size: cover;
     border-radius: 20px;
 }
 
 .container-box-food:hover,
 .container-box-desert:hover,
-.container-box-drink:hover {
+.container-box-drink:hover,
+.rating-box1:hover,
+.rating-box2:hover,
+.rating-box3:hover,
+.rating-box4:hover,
+.rating-box5:hover,
+.rating-box6:hover {
     box-shadow: 0 1rem 3rem -0.75rem #FF9967;
     /* Change the box-shadow color to red on hover */
     transition: box-shadow 0.3s;
@@ -175,8 +201,11 @@ button {
         grid-template-columns: repeat(6, 1fr);
         /* Adjust the number of columns for smaller screens */
         grid-template-areas:
-            'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';
-        ;
+            'menutag menutag menutag menutag menutag menutag'
+            'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink'
+            'rating_tag rating_tag rating_tag rating_tag rating_tag rating_tag'
+            'rating-box1 rating-box2 rating-box3 rating-box4 rating-box5 rating-box6';
+
     }
 
     .container-box-food,
@@ -202,9 +231,46 @@ button {
     grid-area: container-box-drink;
 }
 
-h1 {
-    margin-left: 8rem;
+.menutag {
+    grid-area: menutag;
     font-size: 25px;
+
+}
+
+.rating_tag {
+    grid-area: rating_tag;
+    font-size: 25px;
+    margin-top: 1rem;
+}
+
+.rating-box1 {
+    background-image: url(https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    grid-area: rating-box1;
+}
+
+.rating-box2 {
+    background-image: url(https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    grid-area: rating-box2;
+}
+
+.rating-box3 {
+    background-image: url(https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    grid-area: rating-box3;
+}
+
+.rating-box4 {
+    background-image: url(https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    grid-area: rating-box4;
+}
+
+.rating-box5 {
+    background-image: url(https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    grid-area: rating-box5;
+}
+
+.rating-box6 {
+    background-image: url(https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    grid-area: rating-box6;
 }
 
 /*grid-template-areas:
