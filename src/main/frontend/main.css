@@ -9,15 +9,21 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: myfirst;
+    src: url(/src/main/frontend/font/PK\ Uttaradit-Medium.ttf);
+  }
+  
+  * {
+    font-family: myfirst;
+  }
+
 body {
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
 }
 
-@font-face {
-    font-family: myFirstFont;
-    src: url(/src/main/frontend/font/PK\ Uttaradit-Medium.ttf);
-}
+
 
 header {
     background-color: #fff;
