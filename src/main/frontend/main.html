@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Kinraidee mfu</title>
+    <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav>
             <div class="left-section">
-                <div class="logo"><img class="Picture_01" src="/src/main/frontend/img/1.png"></div>
+                <img class="logo-header" src="img/2.png" alt="">
                 <div class="search-bar">
                     <input type="text" placeholder="Search">
                     <button class="search_bt">Search</button>
@@ -30,85 +33,43 @@
             </div>
         </nav>
     </header>
-
-
-
-    
-    <section class="container">
-        <div class="slider-wrapper">
-            <div class="slider">
-                <img id="slider-1"
-                    src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="">
-                <img id="slider-2"
-                    src="https://images.unsplash.com/photo-1533745807-618e4bd071f2?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="">
-                <img id="slider-3"
-                    src="https://images.immediate.co.uk/production/volatile/sites/3/2023/04/naruto-762b09d.jpg?quality=90&resize=556,370"
-                    alt="">
-
-            </div>
-            <div class="slider-nav">
-                <a href="#slider-1"></a>
-                <a href="#slider-2"></a>
-                <a href="#slider-3"></a>
-
-            </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img
+                    src="https://marketplace.canva.com/EAFgDXgl-c4/1/0/1600w/canva-%E0%B8%AA%E0%B8%B5%E0%B9%81%E0%B8%94%E0%B8%87-%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5-%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%B9%E0%B9%81%E0%B8%99%E0%B8%B0%E0%B8%99%E0%B8%B3-%E0%B8%AA%E0%B8%B5%E0%B8%89%E0%B8%B9%E0%B8%94%E0%B8%89%E0%B8%B2%E0%B8%94-%E0%B8%AA%E0%B8%99%E0%B8%B8%E0%B8%81-%E0%B9%82%E0%B8%9B%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%99%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%99-OWlpY4-D1oA.jpg"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""></div>
+            <div class="swiper-slide"><img
+                    src="https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""></div>
         </div>
-    </section>
-    
-    <h1>MENU</h1>
-    
-        <div class="grid_layer">
-            <div class="container-box-food">
-                <h5></h5>
-            </div>
-            <div class="container-box-desert">
-                <h5></h5>
-            </div>
-            <div class="container-box-drink">
-                <h5></h5>
-            </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
 
+    <div class="grid_layout">
 
-
-            <div class="footer">
-                <div class="logo2"><img class="Picture_02" src="/src/main/frontend/img/เพิ่มหัวเรื่อง.png"></div>
-        
-                <div class="About_me">
-                <h3>เกี่ยวกับเรา</h3>
-                <p>Mae Fah Luang University Sports Center <br/>
-                    333 Village No. 1, Thasud Subdistrict, Mueang District <br/>
-                    Chiang Rai 57100 <br/>
-                    Phone: 0 5391 7821 <br/>
-                    Email: kinreadee@mfu.ac.th <br/>
-                </p>
-                </div>
-                
-                <div class="Hel_p">
-                <h3>ช่วยเหลือ</h3>
-                <a href="#">ติดต่อ Admin</a>
-                </div>
-                
-        
-                <h3 class="Follo_w">ติดตาม กินไรดีมฟล</h3>
-            </div>
-        
-
-
-
-    <div class="grid">
-        <h1 class="menutag">MENU</h1>
+        <h1 class="menutag">Menu</h1>
         <div class="container-box-food">
-            <h5></h5>
+            <div class="content-box">Food</div>
         </div>
         <div class="container-box-desert">
-            <h5></h5>
+            <div class="content-box">Dessert</div>
         </div>
         <div class="container-box-drink">
-            <h5></h5>
+            <div class="content-box">Drink</div>
         </div>
-        <h1 class="rating_tag">menu-Rating</h1>
+        <h1 class="rating_tag">Menu-rating</h1>
         <div class="rating-box1">
             <h5></h5>
         </div>
@@ -126,15 +87,86 @@
         </div>
         <div class="rating-box6">
             <h5></h5>
+        </div>
+        <div class="rating-box7">
+            <h5></h5>
+        </div>
+        <!--<div class="footer">
 
         </div>
-       
-   
-    
+    </div>
+    <div class="footer">
+        <div class="logo2"><img class="Picture_02" src="/src/main/frontend/img/เพิ่มหัวเรื่อง.png"></div>
 
-    
-   
+        <div class="About_me">
+            <h3>เกี่ยวกับเรา</h3>
+            <p>Mae Fah Luang University Sports Center <br />
+                333 Village No. 1, Thasud Subdistrict, Mueang District <br />
+                Chiang Rai 57100 <br />
+                Phone: 0 5391 7821 <br />
+                Email: kinreadee@mfu.ac.th <br />
+            </p>
+        </div>
+        <div class="Hel_p">
+            <h3>ช่วยเหลือ</h3>
+            <a href="#">ติดต่อ Admin</a>
+        </div>
+        <h3 class="Follo_w">ติดตาม กินไรดีมฟล</h3>
+    </div>-->
+    </div>
+    <footer class="footer">
+        <div class="container row">
+            <div class="footer-col">
+                <h4>KIN REA DEE MFU</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Mae Fah Luang University</a></li>
+                    <li><a href="#">333 Village No. 1, Thasud Subdistrict, Mueang District</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">ติดต่อadmin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
