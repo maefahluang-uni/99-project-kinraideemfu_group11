@@ -1,3 +1,13 @@
+@font-face {
+  font-family: myfirst;
+  src: url(/src/main/frontend/font/PK\ Uttaradit-Medium.ttf);
+}
+
+* {
+  font-family: myfirst;
+}
+
+
 /* Customize the label (the container) */
 .container {
     display: block;
@@ -5,7 +15,7 @@
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 12px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -17,8 +27,6 @@
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
   }
   
   /* Create a custom radio button */
@@ -28,22 +36,48 @@
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: #fff;
+    border: 1.5px solid #979797;
     border-radius: 50%;
   }
-  
+
+  /* Create a custom box button */
+  .checkmark1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1.5px solid #979797;
+    border-radius: 10%;
+  }
+
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
-    background-color: #e93636;
+    background-color: #cac0c0;
+  }
+  .container:hover input ~ .checkmark1 {
+    background-color: #cac0c0;
   }
   
   /* When the radio button is checked, add a blue background */
   .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #FF9967;
+  }
+
+  .container input:checked ~ .checkmark1 {
+    background-color: #FF9967;
   }
   
   /* Create the indicator (the dot/circle - hidden when not checked) */
   .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkmark1:after {
     content: "";
     position: absolute;
     display: none;
@@ -53,18 +87,74 @@
   .container input:checked ~ .checkmark:after {
     display: block;
   }
+
+  .container input:checked ~ .checkmark1:after {
+    display: block;
+  }
   
   /* Style the indicator (dot/circle) */
   .container .checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: white;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   }
 
+  .container .checkmark1:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    }
+  
+  /*box*/
   .contain{
-    border: solid 2px crimson;
-    display: grid;
+    border: solid 1px;
+    width: 200px ;
+    padding: 20px 30px;
+    border-radius: 10px;
+  }
+
+  /*right container top*/
+  .container_right_top{
+    border: 1px solid #FF9967;
+    width: 200px;
+    padding:  20px 30px;
+    border-radius: 10px;
+  }
+
+  .image1{
+    border-radius: 10px;
+    width: 200px;
+  }
+
+  /*right container down*/
+  .container_right_down{
+    border: solid 1px;
+    width: 200px;
+    padding: 20px 30px;
+    border-radius: 10px;
+  }
+
+  .container-right_down_infont{
+    border: solid 1px;
+    padding: 2px 3px;
+    border-radius: 10px;
+  }
+
+  .image2{
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    border: solid 1px;
   }
