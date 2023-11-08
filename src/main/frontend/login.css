@@ -1,0 +1,58 @@
+@font-face {
+    font-family: font;
+    src: url(/src/main/frontend/font/PK\ Uttaradit-Medium.ttf);
+}
+
+*{
+    font-family: font;
+}
+body{
+    
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: #000000;
+}
+.login_container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: center;
+    border: solid chartreuse 2px;
+    border-radius: 10px;
+}
+
+.Submit{
+    align-items: center;
+    display: flex;
+    
+}
+
+.Username{
+    border-radius: 50px;
+    width: 500px;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    align-items: center;
+}
+.Password{
+    border-radius: 50px;
+    width: 500px;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    align-items: center;
+}
+
+
+a {
+    margin-left: 11cm;
+
+
+}
