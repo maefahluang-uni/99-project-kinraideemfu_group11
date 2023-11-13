@@ -1,3 +1,14 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: myfirst;
   src: url(/src/main/frontend/font/PK\ Uttaradit-Medium.ttf);
@@ -7,93 +18,203 @@
   font-family: myfirst;
 }
 
+body {
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+
+.search-bar {
+  margin-left: 10cm;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-dropdown {
+  position: relative;
+  margin-left: 20px;
+}
+
+.profile-dropdown button {
+  padding: 5px 10px;
+  background-color: #ffa12f;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffa12f;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+}
+
+.profile-menu li {
+  margin: 0;
+}
+
+.profile-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.profile-menu a:hover {
+  background-color: #555;
+}
+
+
+.profile-dropdown:hover .profile-menu {
+  display: block;
+}
+
+
+header {
+  background-color: #fff;
+  width: 100%;
+  height: 15vh;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.10);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+
+}
+
+header .logo-header {
+  height: 100%;
+  width: 10%;
+  margin-left: 0rem;
+}
+
+
 
 /* Customize the label (the container) */
 .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 12px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* Hide the browser's default radio button */
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #fff;
-    border: 1.5px solid #979797;
-    border-radius: 50%;
-  }
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
-  /* Create a custom box button */
-  .checkmark1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #fff;
-    border: 1.5px solid #979797;
-    border-radius: 10%;
-  }
 
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
-    background-color: #cac0c0;
-  }
-  .container:hover input ~ .checkmark1 {
-    background-color: #cac0c0;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .container input:checked ~ .checkmark {
-    background-color: #FF9967;
-  }
+}
 
-  .container input:checked ~ .checkmark1 {
-    background-color: #FF9967;
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
 
-  .checkmark1:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1.5px solid #979797;
+  border-radius: 50%;
+}
 
-  .container input:checked ~ .checkmark1:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  .container .checkmark:after {
+/* Create a custom box button */
+.checkmark1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1.5px solid #979797;
+  border-radius: 10%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+  background-color: #cac0c0;
+}
+
+.container:hover input~.checkmark1 {
+  background-color: #cac0c0;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+  background-color: #FF9967;
+}
+
+.container input:checked~.checkmark1 {
+  background-color: #FF9967;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+.container input:checked~.checkmark1:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -103,58 +224,321 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.container .checkmark1:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*box*/
+.contain {
+  border: solid 2px #D9D9D9;
+  width: 200px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  grid-area: contain;
+}
+
+/*right container top*/
+.container_right_top {
+  /*border: 1px solid #FF9967;*/
+  width: 270px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background-image: url(https://jame-design.net/wp-content/uploads/2022/05/Poster2.jpg);
+  background-size: cover;
+  grid-area: container_right_top;
+}
+
+/*.image1 {
+  border-radius: 10px;
+  min-width: 2500px;
+  min-height: 2500px;
+}
+
+/*right container down*/
+.container_right_down {
+  border: solid 2px #D9D9D9;
+  min-width: 250px;
+  margin-right: 1rem;
+  padding: 20px 30px;
+  border-radius: 10px;
+  grid-area: container_right_down;
+}
+
+.container-right_down_infont {
+  border: solid 2px #D9D9D9;
+  margin-top: 1rem;
+  border-radius: 10px;
+  min-width: 120px;
+  min-height: 120px;
+}
+
+.image2 {
+  border-radius: 10px;
+  margin: 12px 0px 3px 10px;
+  width: 90px;
+  height: 90px;
+}
+
+.Border_box1,
+.Border_box2,
+.Border_box3 {
+  border: 2px solid #D9D9D9;
+  border-radius: 10px 10px;
+  max-width: 750px;
+  grid-template-rows: 1fr 1fr;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+
+}
+
+.Border_box1 {
+  grid-area: Border_box1;
+}
+
+.Border_box2 {
+  grid-area: Border_box2;
+}
+
+.Border_box3 {
+  grid-area: Border_box3;
+}
+
+.Grid_ImgShop {
+  box-sizing: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 700px;
+  margin: 30px;
+}
+
+img {
+  height: 130px;
+  width: 130px;
+  border-radius: 20px 20px;
+}
+
+.Content_Shop {
+  margin: -15px 0px 0px 50px;
+  display: flex;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+p {
+  color: #979797;
+  margin: -15px 0px 20px 50px;
+}
+
+[id='toggle-heart'] {
+  position: absolute;
+  left: -100vw;
+
+  display: flex;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+
+}
+
+[id='toggle-heart']:checked+label {
+  color: #FF9967;
+  -webkit-filter: none;
+  filter: none;
+  will-change: font-size;
+  -webkit-animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+  animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+[id='toggle-heart']:checked+label:before,
+[id='toggle-heart']:checked+label:after {
+  -webkit-animation: inherit;
+  animation: inherit;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+[id='toggle-heart']:checked+label:before {
+  will-change: transform, border-width, border-color;
+  -webkit-animation-name: bubble;
+  animation-name: bubble;
+}
+
+[id='toggle-heart']:checked+label:after {
+  will-change: opacity, box-shadow;
+  -webkit-animation-name: sparkles;
+  animation-name: sparkles;
+}
+
+[id='toggle-heart']:focus+label {
+  text-shadow: 0 0 3px white, 0 1px 1px white, 0 -1px 1px white, 1px 0 1px white, -1px 0 1px white;
+}
+
+[for='toggle-heart'] {
+  align-self: center;
+  position: relative;
+  color: #888;
+  font-size: 2em;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+[for='toggle-heart']:before,
+[for='toggle-heart']:after {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  content: '';
+}
+
+[for='toggle-heart']:before {
+  box-sizing: border-box;
+  margin: -2.25rem;
+  border: solid 2.25rem #e2264d;
+  width: 4.5rem;
+  height: 4.5rem;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[for='toggle-heart']:after {
+  margin: -0.1875rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  box-shadow: 0.32476rem -3rem 0 -0.1875rem #ff8080, -0.32476rem -2.625rem 0 -0.1875rem #ffed80, 2.54798rem -1.61656rem 0 -0.1875rem #ffed80, 1.84982rem -1.89057rem 0 -0.1875rem #a4ff80, 2.85252rem 0.98418rem 0 -0.1875rem #a4ff80, 2.63145rem 0.2675rem 0 -0.1875rem #80ffc8, 1.00905rem 2.84381rem 0 -0.1875rem #80ffc8, 1.43154rem 2.22414rem 0 -0.1875rem #80c8ff, -1.59425rem 2.562rem 0 -0.1875rem #80c8ff, -0.84635rem 2.50595rem 0 -0.1875rem #a480ff, -2.99705rem 0.35095rem 0 -0.1875rem #a480ff, -2.48692rem 0.90073rem 0 -0.1875rem #ff80ed, -2.14301rem -2.12438rem 0 -0.1875rem #ff80ed, -2.25479rem -1.38275rem 0 -0.1875rem #ff8080;
+}
+
+@-webkit-keyframes heart {
+
+  0%,
+  17.5% {
+    font-size: 0;
+  }
+}
+
+@keyframes heart {
+
+  0%,
+  17.5% {
+    font-size: 0;
+  }
+}
+
+@-webkit-keyframes bubble {
+  15% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-color: #cc8ef5;
+    border-width: 2.25rem;
   }
 
-  .container .checkmark1:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    }
-  
-  /*box*/
-  .contain{
-    border: solid 1px;
-    width: 200px ;
-    padding: 20px 30px;
-    border-radius: 10px;
+  30%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-color: #cc8ef5;
+    border-width: 0;
+  }
+}
+
+@keyframes bubble {
+  15% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-color: #cc8ef5;
+    border-width: 2.25rem;
   }
 
-  /*right container top*/
-  .container_right_top{
-    border: 1px solid #FF9967;
-    width: 200px;
-    padding:  20px 30px;
-    border-radius: 10px;
+  30%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border-color: #cc8ef5;
+    border-width: 0;
+  }
+}
+
+@-webkit-keyframes sparkles {
+
+  0%,
+  20% {
+    opacity: 0;
   }
 
-  .image1{
-    border-radius: 10px;
-    width: 200px;
+  25% {
+    opacity: 1;
+    box-shadow: 0.32476rem -2.4375rem 0 0rem #ff8080, -0.32476rem -2.0625rem 0 0rem #ffed80, 2.1082rem -1.26585rem 0 0rem #ffed80, 1.41004rem -1.53985rem 0 0rem #a4ff80, 2.30412rem 0.85901rem 0 0rem #a4ff80, 2.08305rem 0.14233rem 0 0rem #80ffc8, 0.76499rem 2.33702rem 0 0rem #80ffc8, 1.18748rem 1.71734rem 0 0rem #80c8ff, -1.35019rem 2.0552rem 0 0rem #80c8ff, -0.60229rem 1.99916rem 0 0rem #a480ff, -2.44865rem 0.22578rem 0 0rem #a480ff, -1.93852rem 0.77557rem 0 0rem #ff80ed, -1.70323rem -1.77366rem 0 0rem #ff80ed, -1.81501rem -1.03204rem 0 0rem #ff8080;
+  }
+}
+
+@keyframes sparkles {
+
+  0%,
+  20% {
+    opacity: 0;
   }
 
-  /*right container down*/
-  .container_right_down{
-    border: solid 1px;
-    width: 200px;
-    padding: 20px 30px;
-    border-radius: 10px;
+  25% {
+    opacity: 1;
+    box-shadow: 0.32476rem -2.4375rem 0 0rem #ff8080, -0.32476rem -2.0625rem 0 0rem #ffed80, 2.1082rem -1.26585rem 0 0rem #ffed80, 1.41004rem -1.53985rem 0 0rem #a4ff80, 2.30412rem 0.85901rem 0 0rem #a4ff80, 2.08305rem 0.14233rem 0 0rem #80ffc8, 0.76499rem 2.33702rem 0 0rem #80ffc8, 1.18748rem 1.71734rem 0 0rem #80c8ff, -1.35019rem 2.0552rem 0 0rem #80c8ff, -0.60229rem 1.99916rem 0 0rem #a480ff, -2.44865rem 0.22578rem 0 0rem #a480ff, -1.93852rem 0.77557rem 0 0rem #ff80ed, -1.70323rem -1.77366rem 0 0rem #ff80ed, -1.81501rem -1.03204rem 0 0rem #ff8080;
   }
+}
 
-  .container-right_down_infont{
-    border: solid 1px;
-    padding: 2px 3px;
-    border-radius: 10px;
-  }
+span {
+  color: #32CD32;
+}
 
-  .image2{
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-    border: solid 1px;
-  }
+
+
+.type_res {
+  color: #FF9967;
+  grid-area: type_res;
+}
+
+.details_res {
+  grid-area: details_res;
+}
+
+/*.borderMain {
+  border: 2px solid #D9D9D9;
+  min-width: 800px;
+  min-height: 100px;
+}*/
+
+.grid_layout {
+  margin-bottom: 3rem;
+  display: grid;
+  margin: 2rem 0rem 2rem 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 1rem;
+  /* Adjust the number of columns for smaller screens */
+  grid-template-areas:
+
+    'type_res type_res type_res type_res type_res'
+    'contain Border_box1 Border_box1 Border_box1  container_right_top '
+    'contain Border_box2 Border_box2 Border_box2  container_right_down'
+    '. Border_box3 Border_box3 Border_box3 container_right_down '
+
+}
