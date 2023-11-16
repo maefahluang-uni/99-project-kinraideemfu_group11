@@ -23,6 +23,34 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+
+
+header {
+  background-color: #fff;
+  width: 100%;
+  height: 15vh;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.10);
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+
+}
+
+header .logo-header {
+  height: 100%;
+  width: 10%;
+  margin-left: 0rem;
+}
+
+
 .left-section {
   display: flex;
   align-items: center;
@@ -71,8 +99,8 @@ button {
   position: absolute;
   background-color: #ffa12f;
   list-style: none;
-  padding: 0;
-  margin: 5px 0 0;
+  padding: 0px;
+  margin: 1px 0 0;
 }
 
 .profile-menu li {
@@ -95,35 +123,6 @@ button {
 .profile-dropdown:hover .profile-menu {
   display: block;
 }
-
-
-header {
-  background-color: #fff;
-  width: 100%;
-  height: 15vh;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.10);
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-
-}
-
-header .logo-header {
-  height: 100%;
-  width: 10%;
-  margin-left: 0rem;
-}
-
 
 
 /* Customize the label (the container) */
