@@ -57,24 +57,27 @@ header .logo-header {
 }
 
 
-.search-bar {
-    margin-left: 10cm;
+button[type=submit]{
+    width: 5%;   
+    margin: 8px 0;  
+    border-radius: 50px;
+    padding: 12px 20px;   
+    display: inline-block;   
+    border: 2px solid #848484;   
+    box-sizing: border-box;
+    text-align: center;
 }
 
-input[type="text"] {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input[type=text] {   
+    width: 35%;   
+    margin: 8px 0;  
+    border-radius: 50px;
+    padding: 12px 20px;   
+    display: inline-block;   
+    border: 2px solid #848484;   
+    box-sizing: border-box;
+    text-align: center;
 }
-
-button {
-    padding: 5px 10px;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
 
 .right-section {
     display: flex;
