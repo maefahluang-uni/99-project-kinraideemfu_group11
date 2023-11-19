@@ -7,29 +7,26 @@
   <link rel="stylesheet" href="menu.css">
   <title>Menu page</title>
 </head>
-
+<script src="https://kit.fontawesome.com/7650f3fb07.js" crossorigin="anonymous"></script>
 <body>
   
   <header>
-    <nav>
-        <div class="left-section">
-            <img class="logo-header" src="img/1.png" alt="">
-            <div class="search-bar">
-                <input type="text" placeholder="Search">
-                <button class="search_bt">Search</button>
-            </div>
+    <img class="header_logo" src="/src/main/frontend/img/1.png" >
+    <form class="searchform">
+      <input type="text" placeholder="ค้นหา">
+      <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+    </form>
+    <div class="pofil_en">
+        <button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i> Profile</button>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-chevron-down" style="color: #979797;"></i></button>
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Setting</a>
+          <a href="#">Log out</a>
         </div>
-        <div class="right-section">
-            <div class="profile-dropdown">
-                <button class="profile_bt">profile</button>
-                <ul class="profile-menu">
-                    <li><a href="#">My Profile</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Log Out</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    </div>
 </header>
 
 
