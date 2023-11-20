@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
     <link rel="stylesheet" href="regsister.css">
+    <script src="https://kit.fontawesome.com/7650f3fb07.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <img class="header_logo" src="/src/main/frontend/img/1.png" >
+        <form class="searchform">
+          <input type="text_01" placeholder="ค้นหา">
+          <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+        </form>
+        <div class="pofil_en">
+            <button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i> Profile</button>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-chevron-down" style="color: #979797;"></i></button>
+            <div class="dropdown-content">
+              <a href="#">Profile</a>
+              <a href="#">Setting</a>
+              <a href="#">Log out</a>
+            </div>
+        </div>
+    </header>
+
+    
     <form>  
         <div class="container_regsister">
             <center> <h1> สมัครสมาชิก </h1> </center>
@@ -14,7 +35,7 @@
             <center><input type="text" placeholder="Username" name="username" required></center>    
             <center><input type="text" placeholder="Password" name="password" required>  </center>
             <center><input type="text" placeholder="Email" name="email" required></center>  
-            <center><button type="submit">ยืนยัน</button></center> 
+            <center><button type="submit_03">ยืนยัน</button></center> 
                
         </div>   
     </form>

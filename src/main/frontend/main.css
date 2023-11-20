@@ -59,7 +59,7 @@ header .header_logo {
     margin-top: 1cm;
 }
 
-button[type=submit]{
+button[type=submit_01]{
     width: 25;   
     margin: 8px 0;  
     border-radius: 10px;
@@ -71,7 +71,7 @@ button[type=submit]{
     text-align: center;
 }
 
-input[type=text] {   
+input[type=text_01] {   
     width: 70%;   
     margin: 8px 0;  
     border-radius: 10px;
@@ -130,6 +130,8 @@ input[type=text] {
   .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   }
+
+
 
 
 
