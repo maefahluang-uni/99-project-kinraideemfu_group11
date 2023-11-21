@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:8100
--- Generation Time: Nov 20, 2023 at 05:38 PM
+-- Generation Time: Nov 21, 2023 at 03:57 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,39 +40,39 @@ CREATE TABLE `review` (
 --
 
 INSERT INTO `review` (`Review_ID`, `User_ID`, `Restaurant_ID`, `ReviewText`, `Rating`) VALUES
-(101, 1, 518, 'สถานที่เยี่ยมมาก! ชอบบรรยากาศ', 4),
-(102, 1, 521, 'อาหารอร่อยมาก โดยเฉพาะของหวาน', 5),
-(103, 2, 513, 'บริการดี แต่ราคาสูงไปหน่อย', 4),
-(104, 2, 515, 'พนักงานเป็นกันเอง และบรรยากาศเป็นกันเอง', 4),
-(105, 3, 511, 'ประสบการณ์ที่ดี คุณภาพอาหารจำเป็นต้องปรับปรุง', 3),
-(106, 3, 512, 'อาหารเลิศรสและบริการรวดเร็ว', 5),
-(107, 4, 517, 'สถานที่นี้วิวสวย แต่เมนูมีจำกัด', 3),
-(108, 4, 517, 'ร้านอาหารที่ดีที่สุดในMFU', 5),
-(109, 5, 514, 'ประสบการณ์โดยเฉลี่ย ไม่มีอะไรพิเศษ', 3),
-(110, 5, 521, 'อาหารอร่อยในบรรยากาศสบาย ๆ', 4),
-(111, 6, 516, 'เวลารอนานเกินไป แต่อาหารก็คุ้มค่า', 4),
-(112, 6, 513, 'คุ้มค่าเงินมาก ชอบความหลากหลายในเมนู', 5),
-(113, 7, 519, 'ของหวานเป็นจุดเด่นของมื้ออาหาร', 5),
-(114, 7, 516, 'บริการดี แต่ปริมาณเครื่องดืมน้อย', 3),
-(115, 8, 518, 'สภาพแวดล้อมที่เหมาะสำหรับครอบครัว', 4),
-(116, 8, 513, 'อาหารน่าทึ่ง! ราคาแพงไปหน่อย', 4),
-(117, 9, 518, 'พนักงานมีความรู้เกี่ยวกับเมนู', 4),
-(118, 9, 514, 'บรรยากาศสบาย ๆ และพนักงานที่เป็นมิตร', 4),
-(119, 10, 515, 'ร้านอาหารมีการตกแต่งที่มีเอกลักษณ์และมีสไตล์', 5),
-(120, 10, 512, 'บริเวณที่นั่งเหมาะสำหรับการรับประทานอาหารค่ำ', 4),
-(121, 11, 511, 'ก๋วยเตี๋ยวหลากหลาย', 4),
-(122, 12, 516, 'บรรยากาศมีชีวิตชีวา และเครื่องดื่มก็สดชื่น', 5),
-(123, 12, 520, 'เครปอร่อยเกินความคาดหมาย', 5),
-(124, 13, 511, 'พนักงานเป็นกันเองแต่มีตัวเลือกจำกัด', 3),
-(125, 13, 512, 'อาหารที่เตรียมไว้อย่างดีใส่ใจในรายละเอียด', 5),
-(126, 14, 514, 'ประสบการณ์การทำอาหารที่ไม่เหมือนใคร ต้องลอง!', 5),
-(127, 14, 515, 'บริการรวดเร็วและราคาสมเหตุสมผล', 4),
-(128, 15, 515, 'ที่นั่งสบายและบรรยากาศอบอุ่น', 4),
-(129, 15, 520, 'เมนูของหวานค่อนข้างน่าผิดหวัง', 3),
-(130, 15, 520, 'แนะนำเป็นอย่างยิ่ง', 5),
-(131, 11, 519, 'พนักงานที่เอาใจใส่และเครื่องดื่มที่หลากหลาย', 4),
-(132, 16, 521, 'การออกแบบตกแต่งภายในที่สวยงาม', 4),
-(133, 16, 519, 'อร่อย แต่รอนานเกินคาด', 3);
+(101, 1, 518, 'Great place! I like the atmosphere', 4),
+(102, 1, 521, 'The food is very delicious. Especially desserts', 5),
+(103, 2, 513, 'Good service but prices a bit high', 4),
+(104, 2, 515, 'Friendly staff and friendly atmosphere', 4),
+(105, 3, 511, 'Good experience Food quality needs to be improved', 3),
+(106, 3, 512, 'Excellent food and quick service', 5),
+(107, 4, 517, 'This place has a beautiful view. But the menu is limited', 3),
+(108, 4, 517, 'Best restaurant in MFU', 5),
+(109, 5, 514, 'average experience Nothing special', 3),
+(110, 5, 521, 'Delicious food in a comfortable atmosphere', 4),
+(111, 6, 516, 'Wait time too long But the food is worth it', 4),
+(112, 6, 513, 'Very good value for money I like the variety in the menu', 5),
+(113, 7, 519, 'Dessert is the highlight of the meal', 5),
+(114, 7, 516, 'Good service but small quantity of drinks', 3),
+(115, 8, 518, 'family friendly environment', 4),
+(116, 8, 513, 'Amazing food! A little expensive', 4),
+(117, 9, 518, 'Staff are knowledgeable about the menu', 4),
+(118, 9, 514, 'Cozy atmosphere and friendly staff', 4),
+(119, 10, 515, 'The restaurant has a unique and stylish decoration', 5),
+(120, 10, 512, 'Seat area suitable for dinner', 4),
+(121, 11, 511, 'variety of noodles', 4),
+(122, 12, 516, 'The atmosphere was lively. And the drinks are refreshing', 5),
+(123, 12, 520, 'Crepes delicious beyond expectations', 5),
+(124, 13, 511, 'Friendly staff but limited options', 3),
+(125, 13, 512, 'Well prepared food with attention to detail', 5),
+(126, 14, 514, 'Unique cooking experience, must try!', 5),
+(127, 14, 515, 'Quick service and reasonable prices', 4),
+(128, 15, 515, 'Comfortable seats and warm atmosphere', 4),
+(129, 15, 520, 'Dessert menu rather disappointing', 3),
+(130, 15, 520, 'Highly recommended', 5),
+(131, 11, 519, 'Attentive staff and wide range of drinks', 4),
+(132, 12, 521, 'Beautiful interior design', 4),
+(133, 13, 519, 'Delicious, but waited longer than expected', 3);
 
 --
 -- Indexes for dumped tables

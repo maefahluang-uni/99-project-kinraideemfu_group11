@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:8100
--- Generation Time: Nov 13, 2023 at 11:13 AM
+-- Generation Time: Nov 21, 2023 at 03:57 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `project`
+-- Database: `project89`
 --
 
 -- --------------------------------------------------------
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `register` (
   `USER_ID` int(100) NOT NULL,
-  `EMAIL` varchar(40) NOT NULL,
-  `FIRST_NAME` varchar(40) NOT NULL,
-  `LAST_NAME` varchar(35) NOT NULL,
-  `USERNAME` varchar(15) NOT NULL,
+  `EMAIL` varchar(400) NOT NULL,
+  `FIRST_NAME` varchar(400) NOT NULL,
+  `LAST_NAME` varchar(400) NOT NULL,
+  `USERNAME` varchar(400) NOT NULL,
   `PASSWORD` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -43,7 +43,7 @@ CREATE TABLE `register` (
 INSERT INTO `register` (`USER_ID`, `EMAIL`, `FIRST_NAME`, `LAST_NAME`, `USERNAME`, `PASSWORD`) VALUES
 (1, 'user1@gmail.com', 'John', 'Doe', 'john_doe', 'password123'),
 (2, 'user2@gmail.com', 'Jane', 'Smith', 'jane_smith', 'pass456'),
-(3, 'user3@gmail.com', 'Bob', 'Johnson', 'bob_j', 'secure789'),
+(3, 'user3@gmail.com', 'Bob', 'Johnson', 'bob_j', 'secure89'),
 (4, 'user4@gmail.com', 'Alice', 'Williams', 'alice_w', 'qwerty12'),
 (5, 'user5@gmail.com', 'Charlie', 'Brown', 'charlie_b', 'abc123'),
 (6, 'user6@gmail.com', 'Eva', 'Miller', 'eva_m', 'p@ssw0rd'),

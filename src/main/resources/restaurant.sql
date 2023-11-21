@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:8100
--- Generation Time: Nov 20, 2023 at 04:57 PM
+-- Generation Time: Nov 21, 2023 at 03:57 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -37,16 +37,16 @@ CREATE TABLE `restaurant` (
 --
 
 INSERT INTO `restaurant` (`Restaurant_ID`, `Restaurant_Name`) VALUES
-(511, 'ก๋วยเตี๋ยวเรือพระอาทิตย์'),
-(512, 'ปากหม้อ หน้ามอ'),
-(513, 'GINDON กินด้งข้าวหน้าของย่าง แม่ฟ้าหลวง'),
-(514, 'Imm Jung อิ่มจังเส้นสด'),
-(515, 'เส้นไชย เจริญทรัพย์'),
-(516, 'Lamp Cafe สาขา1หน้าม.แม่ฟ้าหลวง'),
+(511, 'Phra Athit Noodles'),
+(512, 'Pag Mor '),
+(513, 'GINDON at Mae Fah Luang'),
+(514, 'Imm Jung fresh noodles'),
+(515, 'Senchai Charoensap'),
+(516, 'Lamp Cafe at Mae Fah Luang'),
 (517, 'Singha Park Cafe M Square MFU Chiang Rai'),
 (518, 'Café Amazon MFU'),
-(519, 'รอดียะห์ โรตีหาดใหญ่'),
-(520, 'เครปยายดา'),
+(519, 'Rodiya Roti Hat Yai'),
+(520, 'Yai Da Crepe'),
 (521, 'Milk Box MFU');
 
 --
