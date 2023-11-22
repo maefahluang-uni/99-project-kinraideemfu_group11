@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:8100
--- Generation Time: Nov 21, 2023 at 03:57 PM
+-- Generation Time: Nov 22, 2023 at 03:51 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -80,9 +80,9 @@ INSERT INTO `food` (`Food_ID`, `Restaurant_ID`, `Restaurant_Name`, `Menu`, `Pric
 (5157, 514, 'Imm Jung fresh noodles', 'Chicken rice and jaew dipping sauce', 75.00, 'https://maps.app.goo.gl/kif9tjg6N4kqyE7p8', 'Monday-Saturday 11.00am.-8.00pm.', '0916989866'),
 (5158, 514, 'Imm Jung fresh noodles', 'Chicken with Mala Sauce on Rice', 75.00, 'https://maps.app.goo.gl/kif9tjg6N4kqyE7p8', 'Monday-Saturday 11.00am.-8.00pm.', '0916989866'),
 (5159, 515, 'Senchai Charoensap', 'Braised Chicken Noodles', 55.00, 'https://maps.app.goo.gl/HZFtN4QTZVj3zBY98', 'Monday-Sunday 10.00am.-9.00pm.', '0850376999'),
-(5160, 515, 'Senchai Charoensap', 'Dry noodles with soy sauce and stewed chicken', 55.00, 'https://maps.app.goo.gl/HZFtN4QTZVj3zBY98', 'Monday-Sunday 10.00am.-9.00pm.', '0850376999'),
+(5160, 515, 'Senchai Charoensap', 'Braised Chicken Noodles', 55.00, 'https://maps.app.goo.gl/HZFtN4QTZVj3zBY98', 'Monday-Sunday 10.00am.-9.00pm.', '0850376999'),
 (5161, 515, 'Senchai Charoensap', 'Namtok Pork  Noodles', 60.00, 'https://maps.app.goo.gl/HZFtN4QTZVj3zBY98', 'Monday-Sunday 10.00am.-9.00pm.', '0850376999'),
-(5162, 515, 'Senchai Charoensap', 'ก๋วยเตี๋ยวแห้งซีอิ๊วน้ำไก่ตุ๋น', 55.00, 'https://maps.app.goo.gl/HZFtN4QTZVj3zBY98', 'Monday-Sunday 10.00am.-9.00pm.', '0850376999'),
+(5162, 515, 'Senchai Charoensap', 'Dry noodles with soy sauce and stewed chicken', 55.00, 'https://maps.app.goo.gl/HZFtN4QTZVj3zBY98', 'Monday-Sunday 10.00am.-9.00pm.', '0850376999'),
 (5163, 515, 'Senchai Charoensap', 'Dry Tom Yum Noodles', 60.00, 'https://maps.app.goo.gl/HZFtN4QTZVj3zBY98', 'Monday-Sunday 10.00am.-9.00pm.', '0850376999'),
 (5164, 515, 'Senchai Charoensap', 'Creamy Tom Yum Noodles', 60.00, 'https://maps.app.goo.gl/HZFtN4QTZVj3zBY98', 'Monday-Sunday 10.00am.-9.00pm.', '0850376999'),
 (5165, 515, 'Senchai Charoensap', 'Clear noodle soup', 55.00, 'https://maps.app.goo.gl/HZFtN4QTZVj3zBY98', 'Monday-Sunday 10.00am.-9.00pm.', '0850376999'),
