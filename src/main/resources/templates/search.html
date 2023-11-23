@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Search</title>
+    <!-- Include any necessary CSS or styling here -->
+</head>
+<body>
+    <h1>Restaurant Search</h1>
+    <form id="searchForm" action="/search" method="get">
+        <label for="restaurantName">Enter Restaurant Name:</label>
+        <input type="text" id="restaurantName" name="name" required>
+        <button type="submit" id="xd">Search</button>
+    </form>
+    <div id="restaurantList"></div>
+    <!-- You can display search results below if needed -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script th:inline="javascript">
+        var testbtn = document.getElementById("xd");
+        testbtn.onclick = init;
+
+        function renderData(data) {
+            let restaurantList = document.getElementById('restaurantList');
+            restaurantList.innerHTML = '';
+            data.forEach(item => {
+                const listItem = document.createElement('div');
+                listItem.textContent = `ID: ${item.id}, Name: ${item.name}`;
+
+                // Append the list item to the container
+                restaurantList.appendChild(listItem);
+            });
+        }
+
+        async function init() {
+            event.preventDefault();
+            const keyword = document.getElementById('restaurantName').value;
+            const res = await axios.get("/searchresult?keyword=" + keyword)
+            renderData(res.data);
+        }
+        setTimeout(init, 0);
+        // /*<![CDATA[*/
+        // var test = /*[[${re}]]*/ undefined;
+        // test.forEach(element => {
+            
+        // });
+    </script>
+</body>
+</html>
