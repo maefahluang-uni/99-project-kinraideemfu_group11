@@ -16,6 +16,13 @@ public class RestaurantModel {
     private Long id;
     @Column(columnDefinition = "VARCHAR")
     private String name;
+    private String rating;
+    public String getRating() {
+        return rating;
+    }
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
     public Long getId() {
         return id;
     }

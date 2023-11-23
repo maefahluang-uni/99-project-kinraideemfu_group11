@@ -13,11 +13,17 @@
 
 <body>
     <header>
-        <img class="header_logo" src="/src/main/resources/static/css/img/1.png">
-        <form class="searchform">
-            <input type="text_01" placeholder="ค้นหา">
+        <img class="header_logo" src="/css/img/1.png">
+        <form class="searchform" action="/search" method="get">
+            <input type="text" name="searchQuery" placeholder="ค้นหา">        
             <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
         </form>
+        <div class="search-results" th:if="${not #lists.isEmpty(restaurants)}">
+            <h2>Search Results</h2>
+            <ul>
+                <li th:each="restaurant : ${restaurants}" th:text="${restaurant.name}"></li>
+            </ul>
+        </div>
         <div class="pofil_en">
             <button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i> Profile</button>
         </div>

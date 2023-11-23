@@ -4,46 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Search</title>
-    <!-- Include any necessary CSS or styling here -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        #restaurantList {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        div {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
     <h1>Restaurant Search</h1>
-    <form id="searchForm" action="/search" method="get">
-        <label for="restaurantName">Enter Restaurant Name:</label>
-        <input type="text" id="restaurantName" name="name" required>
-        <button type="submit" id="xd">Search</button>
-    </form>
     <div id="restaurantList"></div>
-    <!-- You can display search results below if needed -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script th:inline="javascript">
-        var testbtn = document.getElementById("xd");
-        testbtn.onclick = init;
+        var searchresult = /*[[${restaurants}]]*/ undefined;
 
         function renderData(data) {
             let restaurantList = document.getElementById('restaurantList');
             restaurantList.innerHTML = '';
             data.forEach(item => {
                 const listItem = document.createElement('div');
-                listItem.textContent = `ID: ${item.id}, Name: ${item.name}`;
-
+                listItem.textContent = `Name: ${item.name}, Rating: ${item.rating}`;
                 // Append the list item to the container
                 restaurantList.appendChild(listItem);
             });
         }
-
         async function init() {
-            event.preventDefault();
-            const keyword = document.getElementById('restaurantName').value;
-            const res = await axios.get("/searchresult?keyword=" + keyword)
-            renderData(res.data);
+            renderData(searchresult);
         }
         setTimeout(init, 0);
-        // /*<![CDATA[*/
-        // var test = /*[[${re}]]*/ undefined;
-        // test.forEach(element => {
-            
-        // });
     </script>
 </body>
 </html>

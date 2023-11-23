@@ -36,21 +36,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="/css/register.css">
+    <title>register</title>
+    <link rel="stylesheet" href="css/regsister.css">
 </head>
 <body>
-    <div class="form">
+    <form>  
+      <div class="form">
         <form method="post" action="/register" th:object="${registerRequest}">
-            <center><h1>สมัครสมาชิก</h1></center>
+            <center> <h1> สมัครสมาชิก </h1> </center>
             <center><img src="/src/main/frontend/img/login.png" alt="" width="" height=""></center>     
             <center><input type="text" placeholder="Login" name="login" required></center>    
-            <center><input type="password" placeholder="Password" name="password" required></center>
-            <center><input type="email" placeholder="Email" name="email" required></center>  
+            <center><input type="text" placeholder="Password" name="password" required>  </center>
+            <center><input type="text" placeholder="Email" name="email" required></center>  
             <center><input type="text" placeholder="First name" name="FIRST_NAME" required></center>  
             <center><input type="text" placeholder="Last name" name="LAST_NAME" required></center>  
-            <center><input type="submit" value="Register"></center> 
-        </form>
-    </div>
+            <center><input type="submit" name="ยืนยัน" value="Register"></center> 
+            
+        </div>   
+    </form>
 </body>
 </html>

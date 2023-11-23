@@ -18,15 +18,16 @@ VALUES
 (15, 'user15@gmail.com', 'Phubet', 'Klubchai', 'Handsome44', 'Somehand66'),
 (16, 'user16@gmail.com', 'Sirisak ', 'Vongsawat ', 'DoDo69', '6969DODO');
 
-INSERT INTO `restaurant_table` (id, name) VALUES
-(511, 'ก๋วยเตี๋ยวเรือพระอาทิตย์'),
-(512, 'ปากหม้อ หน้ามอ'),
-(513, 'GINDON กินด้งข้าวหน้าของย่าง แม่ฟ้าหลวง'),
-(514, 'Imm Jung อิ่มจังเส้นสด'),
-(515, 'เส้นไชย เจริญทรัพย์'),
-(516, 'Lamp Cafe สาขา1หน้าม.แม่ฟ้าหลวง'),
-(517, 'Singha Park Cafe M Square MFU Chiang Rai'),
-(518, 'Café Amazon MFU'),
-(519, 'รอดียะห์ โรตีหาดใหญ่'),
-(520, 'เครปยายดา'),
-(521, 'Milk Box MFU');
+
+INSERT INTO restaurant_table (id, name, rating) VALUES
+(511, 'Phra Athit Noodles', 5),
+(512, 'Pag Mor', 4),
+(513, 'GINDON at Mae Fah Luang', 4),
+(514, 'Imm Jung fresh noodles', 4),
+(515, 'Senchai Charoensap', 5),
+(516, 'Lamp Cafe at Mae Fah Luang', 4),
+(517, 'Singha Park Cafe M Square MFU Chiang Rai', 4),
+(518, 'Cafe Amazon MFU', 5),
+(519, 'Rodiya Roti Hat Yai', 3),
+(520, 'Yai Da Crepe', 5),
+(521, 'Milk Box MFU', 4);
