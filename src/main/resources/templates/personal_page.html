@@ -4,16 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/src/main/resources/static/css/personal.css">
-    <script src="https://kit.fontawesome.com/7650f3fb07.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="/css/personal.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <img class="header_logo" src="/src/main/resources/static/css/img/1.png">
+        <img class="header_logo" src="/css/img/1.png">
         <form class="searchform">
             <input type="text" placeholder="ค้นหา">
             <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
@@ -35,8 +32,8 @@
             <div class="avatar">
                 <img src="https://www.w3schools.com/w3images/avatar2.png" alt="">
             </div>
-            <h2 class="name"><span th:text="${userLogin.getLogin}"></span></h2>
-            <h5 class="position"><span th:text="${userLogin.getEmail()}"></span> </h5>
+            <h2 class="name"><span th:text="${currentuser.getLogin}"></span></h2>
+         <h5 class="position"><span th:text="${currentuser.getEmail()}"></span> </h5>
         </div>
     </div>
     <!-- <script th:inline="javascript">

@@ -1,4 +1,7 @@
 package th.mfu.controller;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,17 +39,24 @@ public class UsersController {
     }
 
     @PostMapping("/login")
-    public String login(@ModelAttribute UsersModel usersModel, Model model){
+    public String login(@ModelAttribute UsersModel usersModel, Model model, HttpServletRequest request, HttpServletResponse response){
         System.out.println("login request:" + usersModel.getLogin() + " " + usersModel.getPassword());
         UsersModel authenticated = usersService.authenticate(usersModel.getLogin(), usersModel.getPassword());
         System.out.println(authenticated);
         if (authenticated != null) {
-            model.addAttribute("userLogin",authenticated);
+             request.setAttribute("currentuser", authenticated);
+             //model.addAttribute("userLogin",authenticated);
             return "personal_page";
         } else {
             return "error_page";
         }         
     }
+     @GetMapping("/logout")
+     public String logout(@ModelAttribute UsersModel usersModel, HttpServletRequest request) {
+        request.getSession().invalidate();
+    return "login_page";
 }
+}
+
 
 

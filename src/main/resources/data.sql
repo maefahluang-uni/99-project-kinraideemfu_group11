@@ -31,3 +31,6 @@ INSERT INTO restaurant_table (id, name, rating) VALUES
 (519, 'Rodiya Roti Hat Yai', 3),
 (520, 'Yai Da Crepe', 5),
 (521, 'Milk Box MFU', 4);
+
+INSERT INTO comment (comment_id, user_id, comment_text) VALUES
+(1, 1, 'Sample Comment');

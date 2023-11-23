@@ -37,6 +37,17 @@ public class UsersService {
         return usersRepository.findByLoginAndPassword(login,password);
     }
 
+    public boolean isUserLoggedIn(String login, String password) {
+        UsersModel user = usersRepository.findByLoginAndPassword(login, password);
+        return user != null;
+    }
+
+
+
+    public UsersModel getUserByLoginAndPassword(String login, String password) {
+        return null;
+    }
+
 
 
 }
