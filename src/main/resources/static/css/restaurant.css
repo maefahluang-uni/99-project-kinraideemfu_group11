@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: myfirst;
-    src: url(/src/main/frontend/font/PK\ Uttaradit-Medium.ttf);
+    src: url(/src/main/resources/static/css/font/PK\ Uttaradit-Medium.ttf);
 }
 
 * {
@@ -23,106 +23,117 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.left-section {
-    display: flex;
-    align-items: center;
-}
-
-
-.search-bar {
-    margin-left: 10cm;
-}
-
-input[type="text"] {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 5px 10px;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
-
-.right-section {
-    display: flex;
-    align-items: center;
-}
-
-.profile-dropdown {
-    position: relative;
-    margin-left: 20px;
-}
-
-.profile-dropdown button {
-    padding: 5px 10px;
-    background-color: #ffa12f;
-    color: #fff;
-    border: none;
-    border-radius: 40px;
-}
-
-.profile-menu {
-    display: none;
-    position: absolute;
-    background-color: #ffa12f;
-    list-style: none;
-    padding: 0;
-    margin: 5px 0 0;
-}
-
-.profile-menu li {
-    margin: 0;
-}
-
-.profile-menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #fff;
-    transition: background-color 0.3s;
-}
-
-.profile-menu a:hover {
-    background-color: #555;
-}
-
-
-.profile-dropdown:hover .profile-menu {
-    display: block;
-}
-
-
 header {
+    display: flex;
+    margin: auto;
     background-color: #fff;
     width: 100%;
-    height: 15vh;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.10);
+    height: 20vh;
     position: sticky;
     top: 0;
-    z-index: 1;
-    margin-bottom: 2rem;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.10);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-
-
-}
-
-header .logo-header {
+header .header_logo {
     height: 100%;
     width: 10%;
     margin-left: 0rem;
+}
+
+.searchform {
+    margin-left: 12.5cm;
+    margin-top: 1cm;
+}
+
+.pofil_e {
+    width: 25;
+    margin: 8px 0;
+    border-radius: 50px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #848484;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.pofil_en {
+    margin-left: 10cm;
+    margin-top: 1cm;
+}
+
+button[type=submit_01] {
+    width: 25;
+    margin: 8px 0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #ffffff;
+    background-color: coral;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type=text_01] {
+    width: 70%;
+    margin: 8px 0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #848484;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+.dropbtn {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: solid 3px #979797;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.dropdown {
+    margin-top: 1.3cm;
+    margin-left: 0.1cm;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: #e8e6e3;
 }
 
 .mix {
@@ -132,14 +143,150 @@ header .logo-header {
 .container {
 
     display: flex;
-    border: 2px solid #D9D9D9;
 
     /*ต้องแก้นะ*/
     max-width: 1250px;
-    min-height: 300px;
+    min-height: 500px;
     padding: 1rem;
     border-radius: 20px;
     margin-bottom: 10px;
+}
+
+.gallery {
+    margin-top: 1%;
+    width: 100%;
+    height: 50vh;
+    max-width: 1600px;
+    max-height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-image {
+    width: 30%;
+    height: calc(50% - 20px);
+    min-width: 300px;
+    min-height: 200px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+/* popup */
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 80%;
+    max-width: 1600px;
+    height: 90vh;
+    max-height: 800px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    overflow: hidden;
+    transition: 1s;
+    opacity: 0;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.popup.active .close-btn,
+.popup.active .image-name,
+.popup.active .index,
+.popup.active .large-image,
+.popup.active .arrow-btn {
+    opacity: 1;
+    transition: opacity .5s;
+    transition-delay: 1s;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 300;
+}
+
+.image-name {
+    opacity: 0;
+}
+
+.close-btn {
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f00;
+    cursor: pointer;
+}
+
+.arrow-btn {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.arrow-btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.index {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 80px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+}
+
+.large-image {
+    margin-top: 5%;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    opacity: 0;
 }
 
 .flexbox {
@@ -204,6 +351,7 @@ header .logo-header {
     height: 100%;
     width: 72%;
     margin-bottom: 10px;
+    margin-top: -10%;
 }
 
 .box3 {
@@ -239,6 +387,7 @@ header .logo-header {
     width: 72%;
     height: 100%;
     margin-bottom: 10px;
+    margin-top: -13.5%;
 }
 
 .gridmenu {
@@ -287,7 +436,8 @@ header .logo-header {
     padding: 3px 3px 3px 3px;
     border-radius: 10%;
     display: flex;
-    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .tagreview2 {
@@ -300,6 +450,9 @@ header .logo-header {
     border-radius: 10%;
     display: flex;
     margin-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 3px;
 
 }
 
@@ -385,39 +538,35 @@ header .logo-header {
     justify-content: left;
 }
 
-.rating:not(:checked)>input {
-    position: absolute;
-    appearance: none;
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1.5em;
+    justify-content: space-around;
+    padding: 0 .2em;
+    text-align: center;
+    width: 5em;
 }
 
-.rating:not(:checked)>label {
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: #ccc;
     cursor: pointer;
-    font-size: 25px;
-    color: #FF9967;
-
 }
 
-
-.rating:not(:checked)>label:before {
-    content: '★';
+.star-rating :checked~label {
+    color: #f90;
 }
 
-.rating>input:checked+label:hover,
-.rating>input:checked+label:hover~label,
-.rating>input:checked~label:hover,
-.rating>input:checked~label:hover~label,
-.rating>label:hover~input:checked~label {
-    color: #FF9967;
+.star-rating label:hover,
+.star-rating label:hover~label {
+    color: #fc0;
 }
 
-.rating:not(:checked)>label:hover,
-.rating:not(:checked)>label:hover~label {
-    color: #FF9967;
-}
-
-.rating>input:checked~label {
-    color: #FF9967;
-}
+/* explanation */
 
 .profile-logo img {
     width: 100%;
@@ -446,82 +595,49 @@ header .logo-header {
     height: 100%;
 }
 
-/*แก้สี*********************************************************/
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #fff;
-    border: 1.5px solid #979797;
-    border-radius: 50%;
-}
-
-/* Create a custom box button */
-.checkmark1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #fff;
-    border: 1.5px solid #979797;
-    border-radius: 10%;
-}
-
-/* On mouse-over, add a grey background color */
-.container44:hover input~.checkmark {
-    background-color: #cac0c0;
-}
-
-.container44:hover input~.checkmark1 {
-    background-color: #cac0c0;
-}
-
-/* When the radio button is checked, add a blue background */
-.container44 input:checked~.checkmark {
-    background-color: #FF9967;
-}
-
-.container44 input:checked~.checkmark1 {
-    background-color: #FF9967;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
+input[type="checkbox"] {
     display: none;
 }
 
-.checkmark1:after {
-    content: "";
+
+input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 35px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type="checkbox"]+label:before {
+    content: "\1F5A4";
+    top: -11px;
+    left: -8px;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 3px;
+    display: block;
     position: absolute;
-    display: none;
+    transition: .5s ease;
 }
 
-/* Show the indicator (dot/circle) when checked */
-.container44 input:checked~.checkmark:after {
-    display: block;
+
+
+input[type="checkbox"]:checked+label:before {
+    border: 1px solid transparent;
+    background-color: transparent;
 }
 
-.container44 input:checked~.checkmark1:after {
-    display: block;
+input[type="checkbox"]:checked+label:after {
+    content: '\1F49B';
+    font-size: 18px;
+    position: absolute;
+    top: -1px;
+    left: 1px;
+    color: gold;
+    transition: .5s ease;
 }
 
-/* Style the indicator (dot/circle) */
-.container44 .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
+
+
 
 .row {
     display: flex;
@@ -531,13 +647,17 @@ header .logo-header {
 
 .box-input {
     width: 300px;
-    height: 200px;
+    height: 50px;
     /* Set the desired width */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+}
+
+a {
+    text-decoration: none;
 }
 
 /********************************************************************************************************

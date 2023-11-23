@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/main.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Kinraidee mfu</title>
@@ -13,31 +13,31 @@
 
 <body>
     <header>
-        <img class="header_logo" src="/src/main/frontend/img/1.png" >
+        <img class="header_logo" src="/src/main/resources/static/css/img/1.png">
         <form class="searchform">
-          <input type="text_01" placeholder="ค้นหา">
-          <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+            <input type="text_01" placeholder="ค้นหา">
+            <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
         </form>
         <div class="pofil_en">
-            <button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i> login</button>
+            <button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i> Profile</button>
         </div>
         <div class="dropdown">
             <button class="dropbtn"><i class="fa-solid fa-chevron-down" style="color: #979797;"></i></button>
             <div class="dropdown-content">
-              <a href="#">Profile</a>
-              <a href="#">Setting</a>
-              <a href="#">Log out</a>
+                <a href="#">Profile</a>
+                <a href="#">Log out</a>
+
             </div>
         </div>
+
     </header>
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://media.contra.com/image/upload/y7uebeib1p7ur65vx9s0" alt="">
+            </div>
             <div class="swiper-slide"><img
-                    src="https://marketplace.canva.com/EAFgDXgl-c4/1/0/1600w/canva-%E0%B8%AA%E0%B8%B5%E0%B9%81%E0%B8%94%E0%B8%87-%E0%B8%AA%E0%B8%B5%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%87-%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B5-%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%B9%E0%B9%81%E0%B8%99%E0%B8%B0%E0%B8%99%E0%B8%B3-%E0%B8%AA%E0%B8%B5%E0%B8%89%E0%B8%B9%E0%B8%94%E0%B8%89%E0%B8%B2%E0%B8%94-%E0%B8%AA%E0%B8%99%E0%B8%B8%E0%B8%81-%E0%B9%82%E0%B8%9B%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%99%E0%B8%A7%E0%B8%99%E0%B8%AD%E0%B8%99-OWlpY4-D1oA.jpg"
-                    alt=""></div>
-            <div class="swiper-slide"><img
-                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                    src="https://www.shutterstock.com/image-vector/horizontal-poster-fast-food-menu-260nw-1071009794.jpg"
                     alt=""></div>
             <div class="swiper-slide"><img
                     src="https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -57,37 +57,63 @@
     <div class="grid_layout">
 
         <h1 class="menutag">Menu</h1>
+
         <div class="container-box-food">
-            <div class="content-box">Food</div>
+            <a href="menufood.html">
+                <div class="content-box">ร้านอาหาร</div>
+            </a>
         </div>
+
         <div class="container-box-desert">
-            <div class="content-box">Dessert</div>
+            <a href="menudessert.html">
+                <div class="content-box">ของหวาน</div>
+            </a>
         </div>
         <div class="container-box-drink">
-            <div class="content-box">Drink</div>
+            <a href="menudrink.html">
+                <div class="content-box">เครื่องดื่ม</div>
+            </a>
         </div>
-        <h1 class="rating_tag">Menu-rating</h1>
-        <div class="rating-box1">
-            <h5></h5>
+        <h1 class="rating_tag">เมนูเรตติ้ง</h1>
+        <div class="center">
+            <div class="rating-box1">
+                <h5 class="name">LampCafe</h5>
+            </div>
         </div>
-        <div class="rating-box2">
-            <h5></h5>
+        <div class="center">
+            <div class="rating-box2">
+
+                <h5 class="name">Singhapark Cafe</h5>
+
+            </div>
         </div>
-        <div class="rating-box3">
-            <h5></h5>
+        <div class="center">
+            <div class="rating-box3">
+                <h5 class="name">ปากหม้อ หน้ามอ</h5>
+            </div>
         </div>
-        <div class="rating-box4">
-            <h5></h5>
+        <div class="center">
+            <div class="rating-box4">
+                <h5 class="name">MilkBox</h5>
+            </div>
         </div>
-        <div class="rating-box5">
-            <h5></h5>
+        <div class="center">
+            <div class="rating-box5">
+                <h5 class="name">ก๋วยเตี๋ยวเรือพระอาทิตย์</h5>
+            </div>
         </div>
-        <div class="rating-box6">
-            <h5></h5>
+        <div class="center">
+            <div class="rating-box6">
+
+                <h5 class="name">Gindon</h5>
+
+            </div>
         </div>
-        <div class="rating-box7">
-            <h5></h5>
-        </div>
+
+
+
+
+
         <!--<div class="footer">
 
         </div>
@@ -114,18 +140,14 @@
     <footer class="footer">
         <div class="container row">
             <div class="footer-col">
-                <h4>KIN REA DEE MFU</h4>
-                <ul>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">our services</a></li>
-                    <li><a href="#">privacy policy</a></li>
-                </ul>
+
+                <div class="box-footer"></div>
             </div>
             <div class="footer-col">
-                <h4>About Us</h4>
+                <h4>เกี่ยวกับเรา</h4>
                 <ul>
-                    <li><a href="#">Mae Fah Luang University</a></li>
-                    <li><a href="#">333 Village No. 1, Thasud Subdistrict, Mueang District</a></li>
+                    <li><a href="#">มหาวิทยาลัยแม่ฟ้าหลวง</a></li>
+                    <li><a href="#">หมู่ที่ 1 ตำบลท่าสุด อำเภอเมืองเชียงราย 57100</a></li>
                 </ul>
             </div>
             <div class="footer-col">
