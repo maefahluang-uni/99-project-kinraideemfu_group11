@@ -1,0 +1,477 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: myfirst;
+    src: url(/css/font/Pk_Uttaradit-Medium.ttf);
+}
+
+* {
+    font-family: myfirst;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+header {
+    display: flex;
+    margin: auto;
+    background-color: #fff;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 20vh;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.10);
+}
+
+header .header_logo {
+    height: 100%;
+    width: 10%;
+    margin-left: 0rem;
+}
+
+.searchform {
+    margin-left: 12.5cm;
+    margin-top: 1cm;
+}
+
+.pofil_e {
+    width: 25;
+    margin: 8px 0;
+    border-radius: 50px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #848484;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.pofil_en {
+    margin-left: 10cm;
+    margin-top: 1cm;
+}
+
+button[type=submit_01] {
+    width: 25;
+    margin: 8px 0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #ffffff;
+    background-color: coral;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type=text_01] {
+    width: 70%;
+    margin: 8px 0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #848484;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+.dropbtn {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: solid 3px #979797;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.dropdown {
+    margin-top: 1.3cm;
+    margin-left: 0.1cm;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: #e8e6e3;
+}
+
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1.5px solid #979797;
+    border-radius: 50%;
+}
+
+/* Create a custom box button */
+.checkmark1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1.5px solid #979797;
+    border-radius: 10%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #cac0c0;
+}
+
+.container:hover input~.checkmark1 {
+    background-color: #cac0c0;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: #FF9967;
+}
+
+.container input:checked~.checkmark1 {
+    background-color: #FF9967;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkmark1:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container input:checked~.checkmark1:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.container .checkmark1:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*box*/
+.contain {
+    border: solid 2px #D9D9D9;
+    width: 200px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    grid-area: contain;
+}
+
+/*right container top*/
+.container_right_top {
+    /*border: 1px solid #FF9967;*/
+    width: 270px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-image: url(https://jame-design.net/wp-content/uploads/2022/05/Poster2.jpg);
+    background-size: cover;
+    grid-area: container_right_top;
+}
+
+/*.image1 {
+  border-radius: 10px;
+  min-width: 2500px;
+  min-height: 2500px;
+}
+
+/*right container down*/
+.container_right_down {
+    border: solid 2px #D9D9D9;
+    min-width: 250px;
+    margin-right: 1rem;
+    padding: 20px 30px;
+    border-radius: 10px;
+    grid-area: container_right_down;
+}
+
+.container-right_down_infont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 2px #D9D9D9;
+    margin-top: 1rem;
+    border-radius: 10px;
+    min-width: 120px;
+    min-height: 120px;
+}
+
+.flex3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.between {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.image2 {
+    border-radius: 10px;
+    margin: 12px 0px 3px 10px;
+    width: 90px;
+    height: 90px;
+}
+
+.title_1 {
+    margin-right: 40%;
+}
+
+.title_2 {
+    margin-right: 60%;
+}
+
+.title_3 {
+    margin-right: 55%;
+}
+
+
+
+.star {
+    color: #FF9967;
+}
+
+.Border_box1,
+.Border_box2,
+.Border_box3 {
+    border: 2px solid #D9D9D9;
+    border-radius: 10px 10px;
+    max-width: 750px;
+    grid-template-rows: 1fr 1fr;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+
+}
+
+.Border_box1 {
+    grid-area: Border_box1;
+}
+
+.Border_box2 {
+    grid-area: Border_box2;
+}
+
+.Border_box3 {
+    grid-area: Border_box3;
+}
+
+.Grid_ImgShop {
+    box-sizing: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    max-width: 700px;
+    margin: 30px;
+}
+
+img {
+    height: 130px;
+    width: 130px;
+    border-radius: 20px 20px;
+}
+
+.Content_Shop {
+    margin: -15px 0px 10px 50px;
+    display: flex;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+p {
+    color: #979797;
+    margin: -15px 0px 20px 50px;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+
+input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 35px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type="checkbox"]+label:before {
+    content: "\1F5A4";
+    top: -11px;
+    left: -8px;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 3px;
+    display: block;
+    position: absolute;
+    transition: .5s ease;
+}
+
+
+
+input[type="checkbox"]:checked+label:before {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+input[type="checkbox"]:checked+label:after {
+    content: '\1F49B';
+    font-size: 18px;
+    position: absolute;
+    top: -1px;
+    left: 1px;
+    color: gold;
+    transition: .5s ease;
+}
+
+/*                       */
+span {
+    color: #32CD32;
+}
+
+
+
+.type_res {
+    color: #FF9967;
+    grid-area: type_res;
+}
+
+.details_res {
+    grid-area: details_res;
+}
+
+/*.borderMain {
+  border: 2px solid #D9D9D9;
+  min-width: 800px;
+  min-height: 100px;
+}*/
+
+.grid_layout {
+    margin-bottom: 3rem;
+    display: grid;
+    margin: 2rem 0rem 2rem 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 1rem;
+    /* Adjust the number of columns for smaller screens */
+    grid-template-areas:
+
+        'type_res type_res type_res type_res type_res'
+        'contain Border_box1 Border_box1 Border_box1  container_right_top '
+        '. Border_box2 Border_box2 Border_box2  container_right_down'
+        '. Border_box3 Border_box3 Border_box3 container_right_down '
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
