@@ -19,6 +19,15 @@ public class UsersModel {
     private String FIRST_NAME;
     private String LAST_NAME;
     
+    private boolean isAdmin;
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+    public void setAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
+    
+    
     
     public String getFIRST_NAME() {
         return FIRST_NAME;
