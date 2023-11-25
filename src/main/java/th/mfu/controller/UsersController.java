@@ -39,40 +39,6 @@ public class UsersController {
         }
         return "personal_page";
     }
-     
-    @GetMapping("/add")
-    public String showAddForm(Model model) {
-        model.addAttribute("user", new UsersModel());
-        return "users/add"; // Create a Thymeleaf template for the add form
-    }
-    @PostMapping("/add")
-    public String addUser(UsersModel user) {
-        usersService.addUser(user);
-        return "redirect:/users";
-    }
-    
-
-    @PostMapping("/remove-user/{userId}")
-public String removeUser(@PathVariable Long userId, Model model) {
-    Object usermodel = servletContext.getAttribute("currentuser");
-    model.addAttribute("currentuser", usermodel);
-
-    if (usermodel instanceof UsersModel) {
-        UsersModel currentuser = (UsersModel) usermodel;
-        if (currentuser.isAdmin()) {
-            usersService.deleteUserById(userId);
-            return "redirect:/admin_page";  // Redirect to the admin page after removing the user
-        }
-    }
-
-    return "personal_page";
-}
-
-    @PostMapping("/make-admin/{userId}")
-    public String makeUserAdmin(@PathVariable Long userId) {
-        usersService.makeUserAdmin(userId);
-        return "redirect:/users";
-    }
 
     @GetMapping("/register")
     public String getRegisterPage(Model model){
