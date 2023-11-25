@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/personal.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img class="header_logo" src="/css/img/1.png">
+        <form class="searchform">
+            <input type="text" placeholder="ค้นหา">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+        </form>
+        <div class="pofil_en">
+            <button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i> Profile</button>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-chevron-down" style="color: #979797;"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Profile</a>
+                <a href="#">Setting</a>
+                <a href="#">Log out</a>
+            </div>
+        </div>
+    </header>
+    <div class="card">
+        <div class="head">
+            <div class="avatar">
+                <img src="https://www.w3schools.com/w3images/avatar2.png" alt="">
+            </div>
+            <h2 class="name"><span th:text="${currentuser.getLogin}"></span></h2>
+         <h5 class="position"><span th:text="${currentuser.getEmail()}"></span> </h5>
+        </div>
+    </div>
+    <!-- <script th:inline="javascript">
+        /*<![CDATA[*/
+        var test = /*[[${userLogin}]]*/ undefined;
+    </script> -->
+</body>
+
+</html>
