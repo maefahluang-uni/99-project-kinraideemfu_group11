@@ -4,40 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Kinraidee mfu</title>
     <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
 </head>
 
+
 <body>
     <header>
-        <img class="header_logo" src="/css/img/1.png">
-        <form class="searchform" action="/search" method="get">
-            <input type="text" name="searchQuery" placeholder="ค้นหา">        
-            <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+        <img class="header_logo" src="css/img/1.png" >
+        <form class="searchform">
+          <input type="text_01" placeholder="ค้นหา">
+          <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
         </form>
-        <div class="search-results" th:if="${not #lists.isEmpty(restaurants)}">
-            <h2>Search Results</h2>
-            <ul>
-                <li th:each="restaurant : ${restaurants}" th:text="${restaurant.name}"></li>
-            </ul>
-        </div>
         <div class="pofil_en">
-            <button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i> Profile</button>
+            <a href="/home"><button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i>Home</button></a>
         </div>
         <div class="dropdown">
             <button class="dropbtn"><i class="fa-solid fa-chevron-down" style="color: #979797;"></i></button>
             <div class="dropdown-content">
-                <a href="#">Profile</a>
-                <a href="#">Log out</a>
-
+                <a href="/login">profile</a>
+                <a href="/login">login</a>
+                <a href="#">logout</a>    
             </div>
         </div>
-
     </header>
-    <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="https://media.contra.com/image/upload/y7uebeib1p7ur65vx9s0" alt="">
@@ -65,56 +58,68 @@
         <h1 class="menutag">Menu</h1>
 
         <div class="container-box-food">
-            <a href="menufood.html">
+            <a th:href="@{/menufood}">
                 <div class="content-box">ร้านอาหาร</div>
             </a>
         </div>
 
         <div class="container-box-desert">
-            <a href="menudessert.html">
+            <a th:href="@{/menudessert}">
                 <div class="content-box">ของหวาน</div>
             </a>
         </div>
         <div class="container-box-drink">
-            <a href="menudrink.html">
+            <a th:href="@{/menudrink}">
                 <div class="content-box">เครื่องดื่ม</div>
             </a>
         </div>
         <h1 class="rating_tag">เมนูเรตติ้ง</h1>
-        <div class="center">
-            <div class="rating-box1">
-                <h5 class="name">LampCafe</h5>
-            </div>
-        </div>
-        <div class="center">
-            <div class="rating-box2">
+        <a th:href="@{/lampcafe}">
+            <div class="center">
 
-                <h5 class="name">Singhapark Cafe</h5>
+                <div class="rating-box1">
+                    <h5 class="name">LampCafe</h5>
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/sgpark}"> 
+            <div class="center">
+                <div class="rating-box2">
+                    <h5 class="name">Singhapark Cafe</h5>
+                </div>
+            </div>
+        </a>
+        </a>
+        <a th:href="@{/pagmor}">
+            <div class="center">
+                <div class="rating-box3">
+                    <h5 class="name">ปากหม้อ หน้ามอ</h5>
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/milkbox}">
+            <div class="center">
+                <div class="rating-box4">
+                    <h5 class="name">MilkBox</h5>
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/noodlesun}">
+            <div class="center">
+                <div class="rating-box5">
+                    <h5 class="name">ก๋วยเตี๋ยวเรือพระอาทิตย์</h5>
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/gindon}">
+            <div class="center">
+                <div class="rating-box6">
 
-            </div>
-        </div>
-        <div class="center">
-            <div class="rating-box3">
-                <h5 class="name">ปากหม้อ หน้ามอ</h5>
-            </div>
-        </div>
-        <div class="center">
-            <div class="rating-box4">
-                <h5 class="name">MilkBox</h5>
-            </div>
-        </div>
-        <div class="center">
-            <div class="rating-box5">
-                <h5 class="name">ก๋วยเตี๋ยวเรือพระอาทิตย์</h5>
-            </div>
-        </div>
-        <div class="center">
-            <div class="rating-box6">
+                    <h5 class="name">Gindon</h5>
 
-                <h5 class="name">Gindon</h5>
-
+                </div>
             </div>
-        </div>
+        </a>
 
 
 

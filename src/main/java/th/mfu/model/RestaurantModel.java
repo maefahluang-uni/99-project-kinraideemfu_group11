@@ -14,7 +14,6 @@ public class RestaurantModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(columnDefinition = "VARCHAR")
     private String name;
     private String rating;
     public String getRating() {

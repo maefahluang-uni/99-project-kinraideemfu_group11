@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/adminpage.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+
+        <div class="User_List_line">
+        <h2>User List</h2>
+        <!-- <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john.doe@gmail.com</td>
+                    <td>john.doe</td>
+                    <td>john123</td>
+                    <td class="action">
+                        <a href="/add-user"></a><button class="btn">Edit</button>
+                        <button class="btn">Remove</button>
+                    </td>
+                </tr> -->
+                <!-- more users here -->
+            <!-- </tbody>
+        </table> -->
+        <table>
+            <!-- Table headers -->
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table body -->
+            <tbody>
+                <tr th:each="users : ${users}">
+                    <!-- Restaurant details -->
+                    <td th:text="${users.id}"></td>
+                    <td th:text="${users.FIRST_NAME}"></td>
+                    <td th:text="${users.LAST_NAME}"></td>
+                    <td th:text="${users.Email}"></td>
+                    <td th:text="${users.login}"></td>
+                    <td th:text="${users.password}"></td>
+                    </td>
+                    <!-- Actions -->
+                    <td class="actions">
+                        <!-- Link to view/manage menu for the restaurant -->
+                        <a th:href="@{/delete-user/{id}(id=${users.id})}" onclick="return confirm('Are you sure you want to delete this users?')">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a th:href="@{/add-user}" class="add-link">Add Users</a>
+        
+        </div>
+        
+        <br>
+
+      <!-- restaurant-manage.html -->

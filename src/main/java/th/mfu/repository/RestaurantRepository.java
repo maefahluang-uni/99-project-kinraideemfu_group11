@@ -5,6 +5,8 @@ import th.mfu.model.RestaurantModel;
 
 import java.util.List;
 
+
 public interface RestaurantRepository extends JpaRepository<RestaurantModel, Long> {
     List<RestaurantModel> findByName(String restaurant_name);
 }
+

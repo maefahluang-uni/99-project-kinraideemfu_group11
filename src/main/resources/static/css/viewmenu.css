@@ -11,12 +11,13 @@
 
 @font-face {
     font-family: myfirst;
-    src: url(/src/main/resources/static/css/font/PK\ Uttaradit-Medium.ttf);
+    src: url(/css/font/narak.ttf);
 }
 
 * {
     font-family: myfirst;
 }
+
 
 body {
     line-height: 1.5;
@@ -147,7 +148,7 @@ input[type=text_01] {
     border: 2px solid #D9D9D9;
     margin: auto;
     /*ต้องแก้นะ*/
-    max-width: 850px;
+    max-width: 58%;
     padding: 1rem;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -158,7 +159,7 @@ input[type=text_01] {
     flex-direction: column;
     border: 2px solid #D9D9D9;
     margin: auto;
-    max-width: 850px;
+    max-width: 58%;
     padding: 1rem;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -173,10 +174,10 @@ input[type=text_01] {
 
 
 .img-box {
-    width: 250px;
-    height: 250px;
+    max-width: 35%;
+    max-height: 35%;
     border-radius: 20px;
-    background-image: url(https://img.wongnai.com/p/400x0/2022/05/10/c2f9f74c29184bfbabd710083a045fe9.jpg);
+
     background-size: cover;
 }
 
@@ -220,8 +221,8 @@ span {
 
 
 .gallery img {
-    width: 226px;
-    height: 180px;
+    width: 250px;
+    height: 206px;
     object-fit: cover;
 
     border-radius: 10px 10px 0 0;
@@ -232,8 +233,8 @@ span {
 .box {
     border: 1px #000 solid;
     border-radius: 10px;
-    max-width: 230px;
-    height: 230px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .content {
