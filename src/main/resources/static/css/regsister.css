@@ -1,4 +1,5 @@
 @font-face {
+<<<<<<< HEAD
     font-family: myfirst;
     src: url(/css/font/narak.ttf);
 }
@@ -7,6 +8,15 @@
     font-family: myfirst;
 }
 
+=======
+    font-family: font;
+    src: url(css/font/Uttaradit-Medium.ttf);
+}
+
+*{
+    font-family: font;
+}
+>>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
 Body {  
     background-color: #ffffff;  
   }  

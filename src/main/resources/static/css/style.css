@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
   font-family: myfirst;
   src: url(/css/font/narak.ttf);
@@ -102,3 +103,68 @@ body {
   .form a:hover {
     color: #ff4987;
   }
+=======
+/* Apply basic styling to the body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the search form container */
+#searchForm {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style form labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Style input fields */
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the search button */
+#searchBtn {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#searchBtn:hover {
+  background-color: #45a049;
+}
+
+/* Style the container for displaying search results */
+#restaurantList {
+  margin-top: 20px;
+}
+
+/* Style individual items in the search results */
+#restaurantList div {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+>>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e

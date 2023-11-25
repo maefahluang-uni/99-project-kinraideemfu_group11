@@ -11,7 +11,11 @@
 
 @font-face {
     font-family: myfirst;
+<<<<<<< HEAD
     src: url(/css/font/narak.ttf);
+=======
+    src: url(/css/font/Pk_Uttaradit-Medium.ttf);
+>>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
 }
 
 * {
@@ -424,9 +428,18 @@ ul {
 .box-footer {
     height: 150px;
     width: 150px;
+<<<<<<< HEAD
     background: url(css/img/3.png);
+=======
+    background: url(/src/main/resources/static/css/img/3.png);
+>>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
     background-size: cover;
     border-radius: 100%;
 }
 
+<<<<<<< HEAD
 /*grid-template-areas:
+=======
+/*grid-template-areas:
+        'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';
+>>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e

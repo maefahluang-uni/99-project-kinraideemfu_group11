@@ -19,6 +19,10 @@ VALUES
 (16, 'user16@gmail.com', 'Sirisak ', 'Vongsawat ', 'DoDo69', '6969DODO', false),
 (17, 'admin@gmail.com', 'Admin ', 'admin ', 'admin', 'admin', true);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
 INSERT INTO restaurant_table (id, name, rating) VALUES
 (511, 'Phra Athit Noodles', 5),
 (512, 'Pag Mor', 4),
@@ -31,6 +35,7 @@ INSERT INTO restaurant_table (id, name, rating) VALUES
 (519, 'Rodiya Roti Hat Yai', 3),
 (520, 'Yai Da Crepe', 5),
 (521, 'Milk Box MFU', 4);
+<<<<<<< HEAD
 
 INSERT INTO `review` (id, uid, rid, reviewtext, rating) VALUES
 (101, 1, 518, 'Great place! I like the atmosphere', 4),
@@ -67,3 +72,5 @@ INSERT INTO `review` (id, uid, rid, reviewtext, rating) VALUES
 (132, 12, 521, 'Beautiful interior design', 4),
 (133, 13, 519, 'Delicious, but waited longer than expected', 3);
 
+=======
+>>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e

@@ -1,6 +1,10 @@
 @font-face {
     font-family: font;
+<<<<<<< HEAD
     src: url(/css/font/narak.ttf);
+=======
+    src: url(/src/main/frontend/font/PK\ Uttaradit-Medium.ttf);
+>>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
 }
 
 *{

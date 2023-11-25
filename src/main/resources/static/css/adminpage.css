@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Add your CSS styles here */
 
 .container {
@@ -37,3 +38,68 @@ th {
 }
 
 /* Add more styles as needed */
+=======
+@font-face {
+  font-family: myfirst;
+  src: url(/src/main/resources/static/css/font/PK\ Uttaradit-Medium.ttf);
+}
+
+* {
+  font-family: myfirst;
+}
+
+
+        .User_List_line{
+          border: solid 2px #c2c2c2;
+          border-radius: 16px;
+          padding: 50px;
+        }
+
+        .Restaurant_List_line{
+          border: solid 2px #c2c2c2;
+          border-radius: 16px;
+          padding: 50px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .action {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn {
+            background-color: coral;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: coral;
+        }
+>>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
