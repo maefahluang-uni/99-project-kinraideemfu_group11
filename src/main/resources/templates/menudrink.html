@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/7650f3fb07.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/menudrink.css">
+    <title>Menu page</title>
+</head>
+
+<body>
+
+    <header>
+        <img class="header_logo" src="css/img/1.png" >
+        <form class="searchform">
+          <input type="text_01" placeholder="ค้นหา">
+          <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+        </form>
+        <div class="pofil_en">
+            <a href="/home"><button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i>Home</button></a>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-chevron-down" style="color: #979797;"></i></button>
+            <div class="dropdown-content">
+                <a href="/login">profile</a>
+                <a href="/login">login</a>
+                <a href="#">logout</a>    
+            </div>
+        </div>
+    </header>
+
+    <!-- left_container_-->
+    <div class="grid_layout">
+        <h1 class="type_res">ของหวาน ยอดนิยม ใน มฟล.</h1>
+        <div class="contain">
+            <label class="container">ร้านอาหาร
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">ร้านดื่ม
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">ร้านของหวาน
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <br>
+            <hr>
+
+            <h5>เรตติ้ง</h5>
+            <label class="container">5.0+
+                <input type="checkbox">
+                <span class="checkmark1"></span>
+            </label>
+            <label class="container">4.0+
+                <input type="checkbox">
+                <span class="checkmark1"></span>
+            </label>
+            <label class="container">3.0+
+                <input type="checkbox">
+                <span class="checkmark1"></span>
+            </label>
+            <label class="container">2.0+
+                <input type="checkbox">
+                <span class="checkmark1"></span>
+            </label>
+            <label class="container">1.0+
+                <input type="checkbox">
+                <span class="checkmark1"></span>
+            </label>
+
+            <br>
+
+
+
+        </div>
+        <div class="Border_box1">
+            <a th:href="@{/lampcafe}">
+                <div class="Grid_ImgShop">
+                    <img src="https://img.wongnai.com/p/1920x0/2021/10/05/529dc661aa864bcd998fc6191042837a.jpg" alt="">
+                    <img src="https://img.wongnai.com/p/400x0/2022/05/10/abc607b2a9db484487c8280db43b7b30.jpg" alt="">
+                    <img src="menuP/Cafe/Lamp Cafe/Sunset (Lamp Cafe).jpg" alt="">
+                    <img src="menuP/Cafe/Lamp Cafe/Black Orange (Lamp Cafe).jpg" alt="">
+                    <img src="menuP/Cafe/Lamp Cafe/Iced Americano (Lamp Cafe).jpg" alt="">
+
+                </div>
+                <div class="Content_Shop">
+                    <h1 class="title_1">LampCafe สาขา 1 หน้ามหาวิทยาลัย</h1>
+                    <input type="checkbox" id="heart">
+                    <label for="heart">
+                </div>
+                <p>LampCafe สาขา 1 หน้ามหาวิทยาลัย</p>
+                <p><span class="star">5.0 <i class='bx bx-star'></i></span> 3 รีวิว ฿ <span>เปิดอยู่</span></p>
+                <p>#ร้านกาแฟ/ชารอบแม่ฟ้าหลวง</p>
+            </a>
+        </div>
+
+        <div class="Border_box2">
+            <a th:href="@{/cafeamazon}">
+
+                <div class="Grid_ImgShop">
+                    <img src="https://www.cotrpro.com/wp-content/uploads/2023/04/340989031_1217394405805914_2585788723191963618_n.jpg"
+                        alt="">
+                    <img src="https://www.cotrpro.com/wp-content/uploads/2022/08/298262470_6000511789977109_5272908392452833860_n.jpg"
+                        alt="">
+                    <img src="menuP/Cafe/café amazon/โยเกิร์ตสมูทตี้มิกซ์เบอรรี่ (café amazon).png"
+                        alt="">
+                    <img src="menuP/Cafe/café amazon/มัทฉะลาเต้ (café amazon).png" alt="">
+                    <img src="https://images.deliveryhero.io/image/fd-kh/LH/y9bl-hero.jpg" alt="">
+
+                </div>
+                <div class="Content_Shop">
+                    <h1 class="title_2">Cafe Amazon MFU</h1>
+                    <input type="checkbox" id="heart">
+                    <label for="heart">
+                </div>
+                <p>Cafe Amazon MFU</p>
+                <p><span class="star">5.0 <i class='bx bx-star'></i></span> 3 รีวิว ฿ <span>เปิดอยู่</span></p>
+                <p>#ร้านกาแฟ/ชา/ขนมแสนอร่อยรอบแม่ฟ้าหลวง</p>
+            </a>
+        </div>
+
+        <div class="Border_box3">
+            <a th:href="@{/sgpark}">
+
+                <div class="Grid_ImgShop">
+                    <img src="menuP/Cafe/Singha Park/Houjicha Latte(Singha Park ).png"
+                        alt="">
+                    <img src="https://img.wongnai.com/p/256x256/2022/03/21/9e6e52c2723c4549a24449686b4db9c1.jpg" alt="">
+                    <img src="https://img.wongnai.com/p/1920x0/2017/08/26/7c18c6ba7c124b7bb10977e4efa49564.jpg" alt="">
+                    <img src="menuP/Cafe/Singha Park/Singha Maruzen Latte(Singha Park ).png"
+                        alt="">
+                    <img src="menuP/Cafe/Singha Park/Fresh Milk Frappe (Singha Park ).png"
+                        alt="">
+
+                </div>
+                <div class="Content_Shop">
+                    <h1 class="title_3">Singha Park Cafe MFU</h1>
+                    <input type="checkbox" id="heart">
+                    <label for="heart">
+                </div>
+                <p>Singha Park Cafe MFU</p>
+                <p><span class="star">4.0 <i class='bx bx-star'></i></span> 3 รีวิว ฿ <span>เปิดอยู่</span></p>
+                <p>#ร้านกาแฟ/ชา/ขนมแสนอร่อยรอบแม่ฟ้าหลวง</p>
+            </a>
+        </div>
+
+
+        <!-- right_container_top-->
+        <div class="container_right_top">
+
+        </div>
+
+        <br>
+
+           <!-- right_container_down-->
+           <div class="container_right_down">
+            <h3>เมนูแนะนำ</h3><a th:href="@{/cafeamazon}">
+                <div class="container-right_down_infont">
+                    <img src="menuP/Cafe/café amazon/มัทฉะลาเต้ (café amazon).png"
+                        class="image2">
+                    <div class="flex3">
+                        <div class="between">
+                            <div class="column">
+                                <span class="star">5.0<i class='bx bx-star'></i></span>
+                                <span>เปิดอยู่</span>
+
+                                <h3>Cafe Amazon</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a th:href="@{/pagmor}">
+                <div class="container-right_down_infont">
+                    <img src="menuP/food/pakmor/ยำหมูยอไข่เค็ม (ปากหม้อ).jpg" class="image2">
+                    <div class="flex3">
+                        <div class="between">
+                            <div class="column">
+                                <span class="star">4.0<i class='bx bx-star'></i></span>
+                                <span>เปิดอยู่</span>
+
+                                <h3>ปากหม้อ</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a th:href="@{/gindon}">
+                <div class="container-right_down_infont">
+
+                    <img src="menuP/food/gindon/ข้าวหน้าเนื้อใบพายพรีเมียมย่างซอส+ไข่ออน (Gindon).jpg"
+                        class="image2">
+                    <div class="flex3">
+                        <div class="between">
+                            <div class="column">
+                                <span class="star">4.0<i class='bx bx-star'></i></span>
+                                <span>เปิดอยู่</span>
+
+                                <h3>Gindon</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a th:href="@{/milkbox}">
+                <div class="container-right_down_infont">
+
+                    <img src="menuP/desert/Milk Box MFU/ช็อกโกแลตโทสต์ (Milk Box).jpg"
+                        class="image2">
+                    <div class="flex3">
+                        <div class="between">
+                            <div class="column">
+                                <span class="star">4.0<i class='bx bx-star'></i></span>
+                                <span>เปิดอยู่</span>
+
+                                <h3>Milkbox</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a th:href="@{/lampcafe}">
+                <div class="container-right_down_infont">
+                    <img src="menuP/Cafe/Lamp Cafe/Sunset Peach (Lamp Cafe).jpg"
+                        class="image2">
+                    <div class="flex3">
+                        <div class="between">
+                            <div class="column">
+                                <span class="star">4.0<i class='bx bx-star'></i></span>
+                                <span>เปิดอยู่</span>
+
+                                <h3>LampCafe</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+    </div>
+
+
+
+    </div>
+    </div>
+
+</body>
+
+</html>
