@@ -64,8 +64,6 @@ public class UsersModel {
         this.email = email;
     }
 }
-<<<<<<< HEAD
-=======
     /*@Override
     public int hashCode() {
         final int prime = 31;
@@ -119,5 +117,4 @@ public class UsersModel {
 
     
     }*/
->>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
 

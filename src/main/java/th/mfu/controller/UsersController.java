@@ -3,10 +3,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-<<<<<<< HEAD
 import javax.transaction.Transactional;
-=======
->>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,13 +13,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-<<<<<<< HEAD
 import th.mfu.model.RestaurantModel;
 import th.mfu.model.UsersModel;
 import th.mfu.repository.UsersRepository;
-=======
 import th.mfu.model.UsersModel;
->>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
 import th.mfu.service.UsersService;
 
 
@@ -32,11 +26,8 @@ public class UsersController {
     private ServletContext servletContext;
 
     private final UsersService usersService;
-<<<<<<< HEAD
     @Autowired
     private UsersRepository usersRepository;
-=======
->>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
 
     public UsersController(UsersService usersService){
         this.usersService = usersService;
@@ -123,7 +114,6 @@ public class UsersController {
             return "redirect:/login";
         }
     }
-<<<<<<< HEAD
 
     @GetMapping("/user")
     public String listUser(Model model){
@@ -184,8 +174,6 @@ public class UsersController {
         return "redirect:/user";
     }
     
-=======
->>>>>>> 860dde4c21ce854f6e7b71acad5ea90c032f109e
 }
 
 
