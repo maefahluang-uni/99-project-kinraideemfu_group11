@@ -47,7 +47,7 @@ The web application explicitly states the absence of food ordering or delivery s
 | Sirisak Vongsawat      | 6531503084     | [sirisak](https://github.com/SirisakVongsawat)          |
  
 
-> Email lamduan mail for Phubet can't submit 
+> Email lamduan mail for Phubet can not submit 
 
 -------------------------------------------------------------------
 ## Cloud Build
