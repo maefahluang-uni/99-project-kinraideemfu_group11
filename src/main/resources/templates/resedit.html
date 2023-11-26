@@ -1,41 +1,99 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <!-- Add your head elements here -->
-    <title>Restaurant Lists</title>
-    <!-- ... other styles and scripts ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/adminpage.css">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: coral;
+        }
+
+        table {
+            width: 80%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .actions a {
+            text-decoration: none;
+            color: coral;
+            margin-right: 10px;
+        }
+
+        .add-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: coral;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Restaurant Management</h2>
+    <div class="container">
+        <h2>Restaurant Management</h2>
 
-<table>
-    <!-- Table headers -->
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <!-- Table body -->
-    <tbody>
-        <tr th:each="restaurant : ${restaurants}">
-            <!-- Restaurant details -->
-            <td th:text="${restaurant.id}"></td>
-            <td th:text="${restaurant.name}"></td>
-            </td>
-            <!-- Actions -->
-            <td class="actions">
-                <!-- Link to view/manage menu for the restaurant -->
-                <a th:href="@{/delete-restaurant/{id}(id=${restaurant.id})}" onclick="return confirm('Are you sure you want to delete this restaurant?')">Delete</a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+        <table>
+            <!-- Table headers -->
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table body -->
+            <tbody>
+                <tr th:each="restaurant : ${restaurants}">
+                    <!-- Restaurant details -->
+                    <td th:text="${restaurant.id}"></td>
+                    <td th:text="${restaurant.name}"></td>
+                    </td>
+                    <!-- Actions -->
+                    <td class="actions">
+                        <!-- Link to delete the restaurant -->
+                        <a th:href="@{/delete-restaurant/{id}(id=${restaurant.id})}" onclick="return confirm('Are you sure you want to delete this restaurant?')">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-<!-- Add Restaurant link -->
-<a th:href="@{/add-restaurant}" class="add-link">Add Restaurant</a>
+        <!-- Add Restaurant link -->
+        <a th:href="@{/add-restaurant}" class="add-link">Add Restaurant</a>
+    </div>
 
 </body>
 </html>

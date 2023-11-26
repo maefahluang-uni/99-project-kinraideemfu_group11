@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class ShowMenu {
+public class ShowMenuController {
     
     @GetMapping("/amazonmenu")
     public String showAmazonmenu(){

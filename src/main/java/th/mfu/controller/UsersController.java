@@ -1,7 +1,6 @@
 package th.mfu.controller;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import th.mfu.model.RestaurantModel;
 import th.mfu.model.UsersModel;
 import th.mfu.repository.UsersRepository;
 import th.mfu.service.UsersService;

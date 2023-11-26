@@ -63,31 +63,46 @@
     </style>
 </head>
 <body>
-   
-    <form th:action="@{/review}" th:object="${reviews}" method="post" enctype="multipart/form-data">
-        <h2>Add Review</h2>
+    <form th:action="@{/cafe}" th:object="${cafes}" method="post" enctype="multipart/form-data">
+        <h2>Add Cafe</h2>
+
         <div class="form-group">
             <label for="id">Id:</label>
             <input type="text" id="id" name="id" th:field="*{id}" required>
         </div>
+
         <div class="form-group">
-            <label for="user">User Id:</label>
-            <input type="text" id="user" name="user" th:field="*{user}" required>
+            <label for="Restaurant_ID">Restaurant ID:</label>
+            <input type="text" id="Restaurant_ID" name="Restaurant_ID" th:field="*{Restaurant_ID}" required>
         </div>
+
         <div class="form-group">
-            <label for="res">Restaurant ID:</label>
-            <input type="text" id="res" name="res" th:field="*{res}" required>
-        </div>
-        <div class="form-group">
-            <label for="reviewtext">Review:</label>
-            <input type="text" id="reviewtext" name="reviewtext" th:field="*{reviewtext}" required>
-        </div>
-        <div class="form-group">
-            <label for="rating">Rating:</label>
-            <input type="text" id="rating" name="rating" th:field="*{rating}" required>
+            <label for="Restaurant_Name">Restaurant name:</label>
+            <input type="text" id="Restaurant_Name" name="Restaurant_Name" th:field="*{Restaurant_Name}" required>
         </div>
         
-        <button type="submit" class="btn btn-primary">Save Review</button>
+        <div class="form-group">
+            <label for="menu">Menu:</label>
+            <input type="text" id="menu" name="menu" th:field="*{menu}" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="Price">Price:</label>
+            <input type="text" id="Price" name="Price" th:field="*{Price}" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="Map_Location">Map_Location:</label>
+            <input type="text" id="Map_Location" name="Map_Location" th:field="*{Map_Location}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Time_of_Service">Time_of_Service:</label>
+            <input type="text" id="Time_of_Service" name="Time_of_Service" th:field="*{Time_of_Service}" required>
+        </div>
+    
+    
+        <button type="submit" class="btn btn-primary">Save Cafe</button>
     </form>
 </body>
 </html>

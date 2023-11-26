@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import th.mfu.model.ReviewModel;
-import th.mfu.model.UsersModel;
 import th.mfu.repository.ReviewRepository;
 
 @Controller
@@ -43,40 +42,5 @@ public class ReviewController {
         reviewRepository.deleteById(id);
         return "redirect:/review";
     }
-    @GetMapping("/edit-review/{id}")
-    public String editReviewForm(@PathVariable Long id, Model model) {
-       ReviewModel reviewModel = reviewRepository.findById(id).orElse(null);
-    
-        if (reviewModel == null) {
-            return "redirect:/review";
-        }
-        model.addAttribute("reviewmodel", reviewModel);
-        return "editmodelform";
-    }
-
-    @PostMapping("/edit-review/{id}")
-    public String editreviewID(@PathVariable Long id, @ModelAttribute ReviewModel fixedreview ) {
-       ReviewModel existreview = reviewRepository.findById(id).orElse(null);
-    
-        if (existreview == null) {
-            return "redirect:/review";
-        }
-    
-        // Check if fixedRestaurant's id is not null before updating existRestaurant's id
-        if (fixedreview.getId() != null) {
-            fixedreview.setId(fixedreview.getId());
-        }
-    
-        fixedreview.setUser(fixedreview.getUser());
-        fixedreview.setRes(fixedreview.getRes());
-        fixedreview.setReviewtext(fixedreview.getReviewtext());
-        fixedreview.setRating(fixedreview.getRating());
-       
-    
-        reviewRepository.save(fixedreview);
-        return "redirect:/review";
-    }
-    
 }
-
 

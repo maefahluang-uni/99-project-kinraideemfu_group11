@@ -424,7 +424,7 @@ ul {
 .box-footer {
     height: 150px;
     width: 150px;
-    background: url(css/img/3.png);
+    background: url(/css/img/3.png);
     background-size: cover;
     border-radius: 100%;
 }
