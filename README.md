@@ -5,7 +5,7 @@
 ### System Features
 
 **1. User-Friendly Interface** 
-- Intuitive design for easy navigation.
+-- Intuitive design for easy navigation.
 - Clear layout for information presentation.
 
 **2. Search Functionality**
