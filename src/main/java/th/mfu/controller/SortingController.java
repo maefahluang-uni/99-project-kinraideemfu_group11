@@ -15,4 +15,9 @@ public class SortingController {
     public String showFourStar(){
         return "ratingfour";
     }
+
+    @GetMapping("/threestar")
+    public String showThreeStar(){
+        return "ratingthree";
+    }
 }

@@ -9,19 +9,10 @@
 
 Body {  
     background-color: #ffffff;  
-  }  
-  button {   
-         background-color: #ABE397;   
-         width: 15%;  
-          color: rgb(255, 255, 255);
+  }
   
-          padding: 15px;   
-          margin: 10px 0px;   
-          border: none; 
-          border-radius: 50px;  
-          cursor: pointer;   
-           }   
  
+  
    input[type=text] {   
           width: 35%;   
           margin: 8px 0;  
@@ -41,3 +32,17 @@ Body {
           width: 50%;   
           padding: 3%;
       } 
+    
+    button {   
+        background-color: #ABE397;   
+         width: 15%;  
+         color: rgb(255, 255, 255);
+ 
+         padding: 15px;   
+         margin: 10px 0px;   
+         border: none; 
+         border-radius: 50px;  
+         cursor: pointer;   
+          } 
+    
+    

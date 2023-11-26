@@ -14,16 +14,10 @@
 
     <header>
         <img class="header_logo" src="css/img/1.png" >
-        <form class="searchform"  action="/search" method="get">
-          <input type="text_01" name="searchQuery" placeholder="ค้นหา">
+        <form class="searchform">
+          <input type="text_01" placeholder="ค้นหา">
           <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
         </form>
-        <div class="search-results" th:if="${not #lists.isEmpty(restaurants)}">
-            <h2>Search Results</h2>
-            <ul>
-                <li th:each="restaurant : ${restaurants}" th:text="${restaurant.name}"></li>
-            </ul>
-        </div>
         <div class="pofil_en">
             <a href="/home"><button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i>Home</button></a>
         </div>
@@ -42,7 +36,7 @@
         <h1 class="type_res">ร้านอาหาร 5 ดาว.</h1>
         <div class="contain">
             <label class="container">ร้านอาหาร
-               <a th:href="@{/menufood}"><input type="checkbox" checked="checked">
+               <a th:href="@{/menufood}"><input type="checkbox">
                 <span class="checkmark"></span></a>
             </label>
 
@@ -62,14 +56,15 @@
 
             <h5>เรตติ้ง</h5>
             <label class="container">5.0+
-                <input type="checkbox" checked="checked">
-                <span class="checkmark1"></span>
+                <a th:href="@{/fivestar}"><input type="checkbox"  checked="checked">
+                <span class="checkmark1"></span></a>
             </label>
             <label class="container">4.0+
-                <input type="checkbox">
-                <span class="checkmark1"></span>
+                <a th:href="@{/fourstar}"><input type="checkbox">
+                <span class="checkmark1"></span></a>
             </label>
             <label class="container">3.0+
+                <a th:href="@{/threestar}"><input type="checkbox">
                 <input type="checkbox">
                 <span class="checkmark1"></span>
             </label>
@@ -99,15 +94,75 @@
                 </div>
                 <div class="Content_Shop">
                     <h1 class="title_1">ก๋วยเตี๋ยวเรือพระอาทิตย์</h1>
-                    <input type="checkbox" id="heart">
-                    <label for="heart">
                 </div>
                 <p>ก๋วยเตี๋ยวเรือพระอาทิตย์</p>
                 <p><span class="star">5.0 <i class='bx bx-star'></i></span> 3 รีวิว ฿ <span>เปิดอยู่</span></p>
                 <p>#ร้านอาหารรอบมหาวิทยาลัยแม่ฟ้าหลวง</p>
                 </a>
         </div>
+        <div class="Border_box2">
+            <a th:href="@{/yaida}">
 
+                <div class="Grid_ImgShop">
+                    <img src="menuP/desert/yaida/yaida8.jpg" alt="">
+                    <img src="menuP/desert/yaida/yaida7.jpg" alt="">
+                    <img src="menuP/desert/yaida/yaida6.jpg" alt="">
+                    <img src="menuP/desert/yaida/yaida1.jpg" alt="">
+                    <img src="menuP/desert/yaida/yaida2.jpg" alt="">
+
+                </div>
+                <div class="Content_Shop">
+                    <h1 class="title_3">เครปยายดา</h1>
+                   
+                </div>
+                <p>เครปยายดา</p>
+                <p><span class="star">5.0 <i class='bx bx-star'></i></span> 3 รีวิว ฿ <span>เปิดอยู่</span></p>
+                <p>#ร้านขนม/เครปยายดา/ขนมแสนอร่อยรอบแม่ฟ้าหลวง</p>
+            </a>
+        </div>
+        <div class="Border_box3">
+            <a th:href="@{/lampcafe}">
+                <div class="Grid_ImgShop">
+                    <img src="https://img.wongnai.com/p/1920x0/2021/10/05/529dc661aa864bcd998fc6191042837a.jpg" alt="">
+                    <img src="https://img.wongnai.com/p/400x0/2022/05/10/abc607b2a9db484487c8280db43b7b30.jpg" alt="">
+                    <img src="menuP/Cafe/Lamp Cafe/Sunset (Lamp Cafe).jpg" alt="">
+                    <img src="menuP/Cafe/Lamp Cafe/Black Orange (Lamp Cafe).jpg" alt="">
+                    <img src="menuP/Cafe/Lamp Cafe/Iced Americano (Lamp Cafe).jpg" alt="">
+
+                </div>
+                <div class="Content_Shop">
+                    <h1 class="title_1">LampCafe สาขา 1 หน้ามหาวิทยาลัย</h1>
+                  
+                </div>
+                <p>LampCafe สาขา 1 หน้ามหาวิทยาลัย</p>
+                <p><span class="star">5.0 <i class='bx bx-star'></i></span> 3 รีวิว ฿ <span>เปิดอยู่</span></p>
+                <p>#ร้านกาแฟ/ชารอบแม่ฟ้าหลวง</p>
+            </a>
+        </div>
+
+        <div class="Border_box4">
+            <a th:href="@{/cafeamazon}">
+
+                <div class="Grid_ImgShop">
+                    <img src="https://www.cotrpro.com/wp-content/uploads/2023/04/340989031_1217394405805914_2585788723191963618_n.jpg"
+                        alt="">
+                    <img src="https://www.cotrpro.com/wp-content/uploads/2022/08/298262470_6000511789977109_5272908392452833860_n.jpg"
+                        alt="">
+                    <img src="menuP/Cafe/café amazon/โยเกิร์ตสมูทตี้มิกซ์เบอรรี่ (café amazon).png"
+                        alt="">
+                    <img src="menuP/Cafe/café amazon/มัทฉะลาเต้ (café amazon).png" alt="">
+                    <img src="https://images.deliveryhero.io/image/fd-kh/LH/y9bl-hero.jpg" alt="">
+
+                </div>
+                <div class="Content_Shop">
+                    <h1 class="title_2">Cafe Amazon MFU</h1>
+                   
+                </div>
+                <p>Cafe Amazon MFU</p>
+                <p><span class="star">5.0 <i class='bx bx-star'></i></span> 3 รีวิว ฿ <span>เปิดอยู่</span></p>
+                <p>#ร้านกาแฟ/ชา/ขนมแสนอร่อยรอบแม่ฟ้าหลวง</p>
+            </a>
+        </div>
 
 
         <!-- right_container_top-->

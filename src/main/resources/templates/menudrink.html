@@ -24,45 +24,46 @@
         <div class="dropdown">
             <button class="dropbtn"><i class="fa-solid fa-chevron-down" style="color: #979797;"></i></button>
             <div class="dropdown-content">
-                <a href="/login">profile</a>
+                <a href="/personal">profile</a>
                 <a href="/login">login</a>
-                <a href="#">logout</a>    
+                <a href="/logout">logout</a>    
             </div>
         </div>
     </header>
-
     <!-- left_container_-->
     <div class="grid_layout">
-        <h1 class="type_res">ของหวาน ยอดนิยม ใน มฟล.</h1>
+        <h1 class="type_res">เครื่องดื่ม ยอดนิยม ใน มฟล.</h1>
         <div class="contain">
             <label class="container">ร้านอาหาร
-                <input type="checkbox">
-                <span class="checkmark"></span>
+               <a th:href="@{/menufood}"><input type="checkbox" >
+                <span class="checkmark"></span></a>
             </label>
 
-            <label class="container">ร้านดื่ม
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
+            <label class="container">เครื่องดื่ม
+                <a th:href="@{/menudrink}"><input type="checkbox" checked="checked">
+                <span class="checkmark"></span></a>
             </label>
 
             <label class="container">ร้านของหวาน
-                <input type="checkbox">
-                <span class="checkmark"></span>
+                <a th:href="@{/menudessert}"><input type="checkbox">
+                <span class="checkmark"></span></a>
             </label>
 
             <br>
             <hr>
+            <br>
 
             <h5>เรตติ้ง</h5>
             <label class="container">5.0+
-                <input type="checkbox">
-                <span class="checkmark1"></span>
+                <a th:href="@{/fivestar}"><input type="checkbox">
+                <span class="checkmark1"></span></a>
             </label>
             <label class="container">4.0+
-                <input type="checkbox">
-                <span class="checkmark1"></span>
+                <a th:href="@{/fourstar}"><input type="checkbox">
+                <span class="checkmark1"></span></a>
             </label>
             <label class="container">3.0+
+                <a th:href="@{/threestar}"><input type="checkbox">
                 <input type="checkbox">
                 <span class="checkmark1"></span>
             </label>
@@ -75,7 +76,7 @@
                 <span class="checkmark1"></span>
             </label>
 
-            <br>
+
 
 
 

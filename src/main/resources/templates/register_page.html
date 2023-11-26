@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="css/regsister.css">
 </head>
 <body>
+  
     <form>  
       <div class="form">
         <form method="post" action="/register" th:object="${registerRequest}">
@@ -50,7 +51,7 @@
             <center><input type="text" placeholder="Email" name="email" required></center>  
             <center><input type="text" placeholder="First name" name="FIRST_NAME" required></center>  
             <center><input type="text" placeholder="Last name" name="LAST_NAME" required></center>  
-            <center><input type="submit" name="ยืนยัน" value="Register"></center> 
+            <center><button type="submit">ถัดไป</button></center> 
             
         </div>   
     </form>

@@ -52,7 +52,7 @@ header .header_logo {
     margin-top: 1cm;
 }
 
-button[type=submit] {
+button[type=submit_01] {
     width: 25;
     margin: 8px 0;
     border-radius: 10px;
@@ -64,7 +64,7 @@ button[type=submit] {
     text-align: center;
 }
 
-input[type=text] {
+input[type=text_01] {
     width: 70%;
     margin: 8px 0;
     border-radius: 10px;
@@ -262,3 +262,41 @@ input[type=text] {
     background: #212121;
     border-color: #212121;
 }
+
+header {
+    display: flex;
+    margin: auto;
+    background-color: #fff;
+    width: 100%;
+    height: 20vh;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.10);
+}
+
+header .header_logo {
+    height: 100%;
+    width: 10%;
+    margin-left: 0rem;
+}
+
+.searchform {
+    margin-left: 12.5cm;
+    margin-top: 1cm;
+}
+
+.pofil_e {
+    width: 25;
+    margin: 8px 0;
+    border-radius: 50px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #848484;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.pofil_en {
+    margin-left: 10cm;
+    margin-top: 1cm;
+}
+
