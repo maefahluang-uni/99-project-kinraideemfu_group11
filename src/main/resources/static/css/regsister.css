@@ -1,11 +1,12 @@
 @font-face {
-    font-family: font;
-    src: url(css/font/Uttaradit-Medium.ttf);
+    font-family: myfirst;
+    src: url(/css/font/narak.ttf);
 }
 
-*{
-    font-family: font;
+* {
+    font-family: myfirst;
 }
+
 Body {  
     background-color: #ffffff;  
   }  

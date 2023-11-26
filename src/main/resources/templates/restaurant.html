@@ -12,44 +12,26 @@
 
 <body>
     <header>
-        <img class="header_logo" src="/src/main/resources/static/css/img/1.png">
-
+        <img class="header_logo" src="css/img/1.png" >
         <form class="searchform">
-            <input type="text_01" placeholder="ค้นหา">
-            <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+          <input type="text_01" placeholder="ค้นหา">
+          <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
         </form>
         <div class="pofil_en">
-            <button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i> login</button>
+            <a href="/home"><button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i>Home</button></a>
         </div>
         <div class="dropdown">
             <button class="dropbtn"><i class="fa-solid fa-chevron-down" style="color: #979797;"></i></button>
             <div class="dropdown-content">
-                <a href="#">Profile</a>
-                <a href="#">Log out</a>
+                <a href="/login">profile</a>
+                <a href="/login">login</a>
+                <a href="#">logout</a>    
             </div>
         </div>
     </header>
-
     <div class="mix">
         <section class="container">
-            <div class="popup">
-                <!-- top bar -->
-                <div class="top-bar">
-                    <p class="image-name">img1.png</p>
-                    <span class="close-btn"></span>
-                </div>
-                <!-- arrows -->
-                <button class="arrow-btn left-arrow"><img
-                        src="https://github.com/kunaal438/image-popup/blob/master/img/arrow.png?raw=true"
-                        alt=""></button>
-                <button class="arrow-btn right-arrow"><img
-                        src="https://github.com/kunaal438/image-popup/blob/master/img/arrow.png?raw=true"
-                        alt=""></button>
-                <!-- image -->
-                <img src="img/img1.png" class="large-image" alt="">
-                <!-- image-index -->
-                <h1 class="index">01</h1>
-            </div>
+
 
             <div class="gallery">
                 <div class="gallery-image">
@@ -73,7 +55,7 @@
                         class="image">
                 </div>
                 <div class="gallery-image">
-                    <img src="https://github.com/kunaal438/image-popup/blob/master/img/img6.png?raw=true" alt=""
+                    <img src="https://github.com/kunaal438/image-popup/blob/master/img/img5.png?raw=true" alt=""
                         class="image">
                 </div>
             </div>
@@ -125,7 +107,9 @@
             </div>
             <div class="container3">
                 <div class="item3">
-                    <div class="box3"></div>
+                    <div class="box3">
+
+                    </div>
                     <div class="flex3">
                         <div class="between">
                             <p class="namemenu">434 ซอย ศรีป่าซาง ตำบล นางแล อำเภอเมืองเชียงราย เชียงราย 57100
@@ -154,9 +138,11 @@
                 </div>
             </div>
             <div class="container5">
-                <div class="item5">
 
-                </div>
+                <img class="item5"
+                    src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t39.30808-6/398235312_847892600674849_278148575196111286_n.jpg?stp=dst-jpg_p843x403&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=xjo8gtEqUSgAX9GZ7UB&_nc_ht=scontent.fbkk10-1.fna&oh=00_AfASBMMzUqWuV0Etm1psAEyxewv38IJLjy0hUACdt85tDw&oe=655C77FA"
+                    alt="">
+
             </div>
             <div class="container4">
                 <div class="item4">
@@ -168,16 +154,26 @@
                     </div>
                     <div class="gridmenu">
                         <div class="boxmenu">
+                            <img class="img4"
+                                src="https://www.mangozero.com/wp-content/uploads/2017/11/singha-park-cafe-chiang-rai-44.jpg"
+                                alt="">
+                        </div>
+                        <div class="boxmenu">
+                            <img class="img4"
+                                src="https://www.mangozero.com/wp-content/uploads/2017/11/singha-park-cafe-chiang-rai-44.jpg"
+                                alt="">
+                        </div>
+                        <div class="boxmenu">
+                            <img class="img4"
+                                src="https://www.mangozero.com/wp-content/uploads/2017/11/singha-park-cafe-chiang-rai-44.jpg"
+                                alt="">
+                        </div>
+                        <div class="boxmenu">
+                            <img class="img4"
+                                src="https://www.mangozero.com/wp-content/uploads/2017/11/singha-park-cafe-chiang-rai-44.jpg"
+                                alt="">
+                        </div>
 
-                        </div>
-                        <div class="boxmenu">
-                            <img src="" alt="">
-                        </div>
-                        <div class="boxmenu">
-                            <img src="" alt="">
-                        </div>
-                        <div class="boxmenu">
-                        </div>
                         <br>
                         <p class="namemenu">บราวนี่</p>
                         <p class="namemenu">ครัวซอง</p>
@@ -207,8 +203,10 @@
                             </div>
                         </div>
                     </div>
-                    <p><span class="reviewtag">รีวิว:</span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
-                        quam esse iusto? Labore deleniti quaerat maxime sapiente ad? Accusantium quis ipsum ullam odio
+                    <p><span class="reviewtag">รีวิว:</span>Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Ex
+                        quam esse iusto? Labore deleniti quaerat maxime sapiente ad? Accusantium quis ipsum ullam
+                        odio
                         officia. Officia omnis maiores rem esse iusto.</p>
                     <br>
                     <hr>
@@ -229,8 +227,10 @@
                             </div>
                         </div>
                     </div>
-                    <p><span class="reviewtag">รีวิว:</span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
-                        quam esse iusto? Labore deleniti quaerat maxime sapiente ad? Accusantium quis ipsum ullam odio
+                    <p><span class="reviewtag">รีวิว:</span>Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Ex
+                        quam esse iusto? Labore deleniti quaerat maxime sapiente ad? Accusantium quis ipsum ullam
+                        odio
                         officia. Officia omnis maiores rem esse iusto.</p>
                     <br>
                     <hr>
@@ -252,8 +252,10 @@
                             </div>
                         </div>
                     </div>
-                    <p><span class="reviewtag">รีวิว:</span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
-                        quam esse iusto? Labore deleniti quaerat maxime sapiente ad? Accusantium quis ipsum ullam odio
+                    <p><span class="reviewtag">รีวิว:</span>Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Ex
+                        quam esse iusto? Labore deleniti quaerat maxime sapiente ad? Accusantium quis ipsum ullam
+                        odio
                         officia. Officia omnis maiores rem esse iusto.</p>
                     <br>
                 </div>
@@ -270,11 +272,6 @@
                             <i class="fa-solid fa-star" style="color: #FF9967;"></i>
                             <i class="fa-solid fa-star" style="color: #FF9967;"></i>
                             <i class="fa-solid fa-star" style="color: #FF9967;"></i>
-                        </div>
-                        <div class="row">
-                            <p class="tagreview">ความคิดเห็น(3)</p>
-                            <p class="tagreview2">5 ดาว(2)</p>
-                            <p class="tagreview2">4 ดาว(1)</p>
                         </div>
                     </div>
 
@@ -298,7 +295,25 @@
                         <input type="radio" id="1-star" name="rating" value="1" />
                         <label for="1-star" class="star">&#9733;</label>
                     </div>
-                    <input type="text" class="box-input" placeholder="Type something...">
+                    <section id="app">
+                        <div class="container-comment">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="comment">
+                                        <p v-for="items in item" v-text="items"></p>
+                                    </div><!--End Comment-->
+                                </div><!--End col -->
+                            </div><!-- End row -->
+                            <div class="row">
+                                <div class="col-6">
+                                    <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem"
+                                        @keyup.enter="addItem()"></textarea>
+                                    <button v-on:click="addItem()" class='primaryContained float-right'
+                                        type="submit">Add Comment</button>
+                                </div><!-- End col -->
+                            </div><!--End Row -->
+                        </div><!--End Container -->
+                    </section><!-- end App -->
 
                 </div>
             </div>
@@ -306,54 +321,35 @@
         </div>
     </div>
 
-
-
     <script>
-        const images = [...document.querySelectorAll('.image')];
+        $(document).ready(function () {
 
-        // popup
+            $(".primaryContained").on('click', function () {
+                $(".comment").addClass("commentClicked");
+            });//end click
+            $("textarea").on('keyup.enter', function () {
+                $(".comment").addClass("commentClicked");
+            });//end keyup
+        });//End Function
 
-        const popup = document.querySelector('.popup');
-        const closeBtn = document.querySelector('.close-btn');
-        const imageName = document.querySelector('.image-name');
-        const largeImage = document.querySelector('.large-image');
-        const imageIndex = document.querySelector('.index');
-        const leftArrow = document.querySelector('.left-arrow');
-        const rightArrow = document.querySelector('.right-arrow');
-
-        let index = 0; // will track our current image;
-
-        images.forEach((item, i) => {
-            item.addEventListener('click', () => {
-                updateImage(i);
-                popup.classList.toggle('active');
-            })
-        })
-
-        const updateImage = (i) => {
-            let path = `https://github.com/kunaal438/image-popup/blob/master/img/img${i + 1}.png?raw=true`;
-            largeImage.src = path;
-            imageName.innerHTML = path;
-            imageIndex.innerHTML = `0${i + 1}`;
-            index = i;
-        }
-
-        closeBtn.addEventListener('click', () => {
-            popup.classList.toggle('active');
-        })
-
-        leftArrow.addEventListener('click', () => {
-            if (index > 0) {
-                updateImage(index - 1);
+        new Vue({
+            el: "#app",
+            data: {
+                title: 'Add a comment',
+                newItem: '',
+                item: [],
+            },
+            methods: {
+                addItem() {
+                    this.item.push(this.newItem);
+                    this.newItem = "";
+                }
             }
-        })
 
-        rightArrow.addEventListener('click', () => {
-            if (index < images.length - 1) {
-                updateImage(index + 1);
-            }
-        })
+        });
     </script>
+
+
 
 </body>
 

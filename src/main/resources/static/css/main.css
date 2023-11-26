@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: myfirst;
-    src: url(/css/font/Pk_Uttaradit-Medium.ttf);
+    src: url(/css/font/narak.ttf);
 }
 
 * {
@@ -424,10 +424,9 @@ ul {
 .box-footer {
     height: 150px;
     width: 150px;
-    background: url(/src/main/resources/static/css/img/3.png);
+    background: url(/css/img/3.png);
     background-size: cover;
     border-radius: 100%;
 }
 
 /*grid-template-areas:
-        'container-box-food container-box-food container-box-desert container-box-desert container-box-drink container-box-drink';

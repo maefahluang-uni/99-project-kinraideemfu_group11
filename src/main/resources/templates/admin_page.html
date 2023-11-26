@@ -3,75 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/adminpage.css">
-    <title>Admin Dashboard</title>
+    <title>Admin Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(190, 190, 190); /* เปลี่ยนสีพื้นหลังทั้งหมดเป็น coral */
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        #admin-box {
+            background-color: coral; /* เปลี่ยนสีพื้นหลังของ admin-box เป็น coral */
+            color: #fff;
+            padding: 20px;
+            font-size: 36px;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        button {
+            background-color: coral; /* เปลี่ยนสีพื้นหลังของปุ่มเป็น coral */
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #ff6f40; /* เปลี่ยนสีพื้นหลังของปุ่มเมื่อโฮเวอร์เป็น coral (หรือสีที่คุณต้องการ) */
+        }
+    </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Admin Dashboard</h1>
-
-        <div class="User_List_line">
-        <h2>User List</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john.doe@gmail.com</td>
-                    <td>john.doe</td>
-                    <td>john123</td>
-                    <td class="action">
-                        <button class="btn">Edit</button>
-                        <button class="btn">Remove</button>
-                    </td>
-                </tr>
-                <!-- more users here -->
-            </tbody>
-        </table>
-        </div>
-        
-        <br>
-
-        <div class="Restaurant_List_line">
-        <h2>Restaurant List</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>ID</th>
-                    <th>Location</th>
-                    <th>Time</th>
-                    <th>Phone Number</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Sushi Restaurant</td>
-                    <td>001</td>
-                    <td>123 Sushi St</td>
-                    <td>12:00 - 22:00</td>
-                    <td>1234567890</td>
-                    <td class="action">
-                        <button class="btn">Edit</button>
-                        <button class="btn">Remove</button>
-                    </td>
-                </tr>
-                <!-- more restaurants here -->
-            </tbody>
-        </table>
-    </div>
+    <div id="container">
+        <div id="admin-box">Admin Page</div>
+        <a href="/user"><button>User</button></a>
+        <a href="/restaurants"><button>Restaurant</button></a>
+        <a href="/review"><button>Reviews</button></a>
+        <a href="/food"><button>Foods</button></a>
+        <a href="/cafe"><button>Cafe</button></a>
+        <a href="/dessert"><button>Dessert</button></a>
     </div>
 </body>
 </html>

@@ -1,0 +1,98 @@
+<!-- add-restaurant-form.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Include necessary head elements -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: coral;
+            text-align: center;
+            margin-top: 20px; /* เพิ่มบรรทัดนี้ */
+        }
+
+        form {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px; /* เพิ่มบรรทัดนี้ */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: coral;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    
+    <form th:action="@{/food}" th:object="${foods}" method="post" enctype="multipart/form-data">
+        <h2>Add Restaurant</h2>
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="text" id="id" name="id" th:field="*{id}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Restaurant_ID">Restaurant ID:</label>
+            <input type="text" id="Restaurant_ID" name="Restaurant_ID" th:field="*{Restaurant_ID}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Restaurant_Name">Restaurant name:</label>
+            <input type="text" id="Restaurant_Name" name="Restaurant_Name" th:field="*{Restaurant_Name}" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="menu">Menu:</label>
+            <input type="text" id="menu" name="menu" th:field="*{menu}" required>
+        </div>
+    
+        <div class="form-group">
+            <label for="Price">Price:</label>
+            <input type="text" id="Price" name="Price" th:field="*{Price}" required>
+        </div>
+    
+    
+        <button type="submit" class="btn btn-primary">Save FoodMenu</button>
+    </form>
+</body>
+</html>

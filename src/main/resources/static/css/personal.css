@@ -1,7 +1,15 @@
+@font-face {
+    font-family: myfirst;
+    src: url(/css/font/narak.ttf);
+}
+
+* {
+    font-family: myfirst;
+}
+
 
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
     background-color: #FF9967;
 }
 

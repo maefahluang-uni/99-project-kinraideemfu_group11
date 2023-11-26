@@ -1,8 +1,8 @@
 package th.mfu.controller;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import th.mfu.model.UsersModel;
+import th.mfu.repository.UsersRepository;
 import th.mfu.service.UsersService;
 
 
@@ -22,6 +23,8 @@ public class UsersController {
     private ServletContext servletContext;
 
     private final UsersService usersService;
+    @Autowired
+    private UsersRepository usersRepository;
 
     public UsersController(UsersService usersService){
         this.usersService = usersService;
@@ -38,40 +41,6 @@ public class UsersController {
             }
         }
         return "personal_page";
-    }
-     
-    @GetMapping("/add")
-    public String showAddForm(Model model) {
-        model.addAttribute("user", new UsersModel());
-        return "users/add"; // Create a Thymeleaf template for the add form
-    }
-    @PostMapping("/add")
-    public String addUser(UsersModel user) {
-        usersService.addUser(user);
-        return "redirect:/users";
-    }
-    
-
-    @PostMapping("/remove-user/{userId}")
-public String removeUser(@PathVariable Long userId, Model model) {
-    Object usermodel = servletContext.getAttribute("currentuser");
-    model.addAttribute("currentuser", usermodel);
-
-    if (usermodel instanceof UsersModel) {
-        UsersModel currentuser = (UsersModel) usermodel;
-        if (currentuser.isAdmin()) {
-            usersService.deleteUserById(userId);
-            return "redirect:/admin_page";  // Redirect to the admin page after removing the user
-        }
-    }
-
-    return "personal_page";
-}
-
-    @PostMapping("/make-admin/{userId}")
-    public String makeUserAdmin(@PathVariable Long userId) {
-        usersService.makeUserAdmin(userId);
-        return "redirect:/users";
     }
 
     @GetMapping("/register")
@@ -142,6 +111,66 @@ public String removeUser(@PathVariable Long userId, Model model) {
             return "redirect:/login";
         }
     }
+
+    @GetMapping("/user")
+    public String listUser(Model model){
+        model.addAttribute("users", usersRepository.findAll());
+        return "useredit";
+    }
+    
+    @GetMapping("/add-user")
+    public String addUserForm(Model model) {
+        model.addAttribute("users", new UsersModel());
+        return "adduserform";
+    }
+
+    @PostMapping("/user")
+    public String saveUsers(@ModelAttribute UsersModel users) {
+        usersRepository.save(users);
+        return "redirect:/user";
+    }
+    
+    @Transactional
+    @GetMapping("/delete-user/{id}")
+    public String deleteUsers(@PathVariable Long id) {
+        usersRepository.deleteById(id);
+        return "redirect:/user";
+    }
+
+    @GetMapping("/edit-user/{id}")
+    public String editUserForm(@PathVariable Long id, Model model) {
+       UsersModel usersModel = usersRepository.findById(id).orElse(null);
+    
+        if (usersModel == null) {
+            return "redirect:/user";
+        }
+        model.addAttribute("usermodel", usersModel);
+        return "edituserform";
+    }
+
+    @PostMapping("/edit-user/{id}")
+    public String editUserID(@PathVariable Long id, @ModelAttribute UsersModel fixedUser) {
+       UsersModel existuser = usersRepository.findById(id).orElse(null);
+    
+        if (existuser == null) {
+            return "redirect:/user";
+        }
+    
+        // Check if fixedRestaurant's id is not null before updating existRestaurant's id
+        if (fixedUser.getId() != null) {
+            fixedUser.setId(fixedUser.getId());
+        }
+    
+        fixedUser.setLogin(fixedUser.getLogin());
+        fixedUser.setPassword(fixedUser.getPassword());
+        fixedUser.setEmail(fixedUser.getEmail());
+        fixedUser.setFIRST_NAME(fixedUser.getFIRST_NAME());
+        fixedUser.setLAST_NAME(fixedUser.getLAST_NAME());
+    
+        usersRepository.save(fixedUser);
+        return "redirect:/user";
+    }
+    
 }
 
 

@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: myfirst;
-    src: url(/css/font/Pk_Uttaradit-Medium.ttf);
+    src: url(/css/font/narak.ttf);
 }
 
 * {
@@ -254,7 +254,8 @@ input[type=text_01] {
 /*box*/
 .contain {
     border: solid 2px #D9D9D9;
-    width: 200px;
+    max-width: 200px;
+    max-width: 80%;
     padding: 20px 30px;
     border-radius: 10px;
     grid-area: contain;
@@ -264,7 +265,8 @@ input[type=text_01] {
 /*right container top*/
 .container_right_top {
     /*border: 1px solid #FF9967;*/
-    width: 270px;
+    max-width: 250px;
+    max-height: 100%;
     padding: 20px 30px;
     border-radius: 5px;
     background-image: url(https://jame-design.net/wp-content/uploads/2022/05/Poster2.jpg);
@@ -281,7 +283,7 @@ input[type=text_01] {
 /*right container down*/
 .container_right_down {
     border: solid 2px #D9D9D9;
-    min-width: 250px;
+    min-width: 70%;
     margin-right: 1rem;
     padding: 20px 30px;
     border-radius: 10px;
@@ -296,8 +298,8 @@ input[type=text_01] {
     border: solid 2px #D9D9D9;
     margin-top: 1rem;
     border-radius: 10px;
-    min-width: 120px;
-    min-height: 120px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .image2 {
@@ -328,12 +330,13 @@ input[type=text_01] {
 .Border_box5 {
     border: 2px solid #D9D9D9;
     border-radius: 10px 10px;
-    max-width: 750px;
+    max-width: 85%;
+    /*85%*/
     grid-template-rows: 1fr 1fr;
     margin: 20px;
     display: flex;
     flex-direction: column;
-    min-height: 200px;
+    max-height: 100%;
 
 }
 
@@ -391,13 +394,15 @@ input[type=text_01] {
     box-sizing: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    max-width: 700px;
+    max-width: 100%;
     margin: 30px;
 }
 
 img {
-    height: 130px;
-    width: 130px;
+    max-height: 130px;
+    max-width: 130px;
+    height: 100%;
+    width: 100%;
     border-radius: 20px 20px;
 }
 

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Include necessary head elements -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: coral;
+            text-align: center;
+            margin-top: 20px; /* เพิ่มบรรทัดนี้ */
+        }
+
+        form {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px; /* เพิ่มบรรทัดนี้ */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: coral;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <form th:action="@{/user}" th:object="${users}" method="post" enctype="multipart/form-data">
+        <h2>Restaurant add</h2>
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="text" id="id" name="id" th:field="*{id}" required>
+        </div>
+        <div class="form-group">
+            <label for="Email">Email:</label>
+            <input type="text" id="Email" name="Email" th:field="*{Email}" required>
+        </div>
+        <div class="form-group">
+            <label for="FIRST_NAME">FIRST_NAME:</label>
+            <input type="text" id="FIRST_NAME" name="FIRST_NAME" th:field="*{FIRST_NAME}" required>
+        </div>
+        <div class="form-group">
+            <label for="LAST_NAME">LAST_NAME:</label>
+            <input type="text" id="LAST_NAME" name="LAST_NAME" th:field="*{LAST_NAME}" required>
+        </div>
+        <div class="form-group">
+            <label for="login">login:</label>
+            <input type="text" id="login" name="login" th:field="*{login}" required>
+        </div>
+        <div class="form-group">
+            <label for="password">password:</label>
+            <input type="text" id="password" name="password" th:field="*{password}" required>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Save Restaurant</button>
+    </form>
+</body>
+</html>
