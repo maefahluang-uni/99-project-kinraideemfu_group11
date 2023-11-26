@@ -8,3 +8,4 @@ import th.mfu.model.ReviewModel;
 public interface ReviewRepository extends JpaRepository<ReviewModel, Long>{
 
 }
+
