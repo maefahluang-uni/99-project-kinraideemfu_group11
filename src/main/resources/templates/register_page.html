@@ -41,24 +41,6 @@
 </head>
 <body>
   
-  <header>
-    <img class="header_logo" src="css/img/1.png" >
-    <form class="searchform">
-      <input type="text_01" placeholder="ค้นหา">
-      <button type="submit_01"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
-    </form>
-    <div class="pofil_en">
-        <a href="/home"><button class="pofil_e"><i class="fa-regular fa-user" style="color: #b0b4ba;"></i>Home</button></a>
-    </div>
-    <div class="dropdown">
-        <button class="dropbtn"><i class="fa-solid fa-chevron-down" style="color: #979797;"></i></button>
-        <div class="dropdown-content">
-            <a href="/personal">profile</a>
-            <a href="/login">login</a>
-            <a href="/logout">logout</a>    
-        </div>
-    </div>
-</header>
     <form>  
       <div class="form">
         <form method="post" action="/register" th:object="${registerRequest}">
