@@ -1,0 +1,34 @@
+<!-- add-restaurant-form.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Include necessary head elements -->
+</head>
+<body>
+    <h2>Add Review</h2>
+    <form th:action="@{/review}" th:object="${reviews}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="text" id="id" name="id" th:field="*{id}" required>
+        </div>
+        <div class="form-group">
+            <label for="user">User Id:</label>
+            <input type="text" id="user" name="user" th:field="*{user}" required>
+        </div>
+        <div class="form-group">
+            <label for="res">Restaurant ID:</label>
+            <input type="text" id="res" name="res" th:field="*{res}" required>
+        </div>
+        <div class="form-group">
+            <label for="reviewtext">Review:</label>
+            <input type="text" id="reviewtext" name="reviewtext" th:field="*{reviewtext}" required>
+        </div>
+        <div class="form-group">
+            <label for="rating">Rating:</label>
+            <input type="text" id="rating" name="rating" th:field="*{rating}" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Save Review</button>
+    </form>
+</body>
+</html>

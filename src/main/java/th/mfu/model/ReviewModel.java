@@ -13,27 +13,27 @@ public class ReviewModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long uid;
-    private Long rid;
+    private String user;
+    private String res;
     private String reviewtext;
-    private Long rating;
+    private String rating;
     public Long getId() {
         return id;
     }
     public void setId(Long id) {
         this.id = id;
     }
-    public Long getUid() {
-        return uid;
+    public String getUser() {
+        return user;
     }
-    public void setUid(Long uid) {
-        this.uid = uid;
+    public void setUser(String user) {
+        this.user = user;
     }
-    public Long getRid() {
-        return rid;
+    public String getRes() {
+        return res;
     }
-    public void setRid(Long rid) {
-        this.rid = rid;
+    public void setRes(String res) {
+        this.res = res;
     }
     public String getReviewtext() {
         return reviewtext;
@@ -41,12 +41,12 @@ public class ReviewModel {
     public void setReviewtext(String reviewtext) {
         this.reviewtext = reviewtext;
     }
-    public Long getRating() {
+    public String getRating() {
         return rating;
     }
-    public void setRating(Long rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
-
-    
+   
+   
 }

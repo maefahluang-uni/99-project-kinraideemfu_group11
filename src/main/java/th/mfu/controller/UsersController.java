@@ -146,8 +146,8 @@ public class UsersController {
         if (usersModel == null) {
             return "redirect:/user";
         }
-        model.addAttribute("restaurantmodel", usersModel);
-        return "editresform";
+        model.addAttribute("usermodel", usersModel);
+        return "edituserform";
     }
 
     @PostMapping("/edit-user/{id}")

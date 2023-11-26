@@ -32,7 +32,7 @@ INSERT INTO restaurant_table (id, name, rating) VALUES
 (520, 'Yai Da Crepe', 5),
 (521, 'Milk Box MFU', 4);
 
-INSERT INTO `review` (id, uid, rid, reviewtext, rating) VALUES
+INSERT INTO review (id, user, res, reviewtext, rating) VALUES
 (101, 1, 518, 'Great place! I like the atmosphere', 4),
 (102, 1, 521, 'The food is very delicious. Especially desserts', 5),
 (103, 2, 513, 'Good service but prices a bit high', 4),

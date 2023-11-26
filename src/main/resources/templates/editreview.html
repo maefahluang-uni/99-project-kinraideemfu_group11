@@ -1,34 +1,78 @@
-<!-- add-restaurant-form.html -->
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-    <!-- Include necessary head elements -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/adminpage.css">
+    <title>Admin Dashboard</title>
 </head>
 <body>
-    <h2>Add Restaurant</h2>
-    <form th:action="@{/review}" th:object="${reviews}" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="id">Id:</label>
-            <input type="text" id="id" name="id" th:field="*{id}" required>
+
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+
+        <div class="Reviews_List_line">
+        <h2>Review List</h2>
+        <!-- <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john.doe@gmail.com</td>
+                    <td>john.doe</td>
+                    <td>john123</td>
+                    <td class="action">
+                        <a href="/add-user"></a><button class="btn">Edit</button>
+                        <button class="btn">Remove</button>
+                    </td>
+                </tr> -->
+                <!-- more users here -->
+            <!-- </tbody>
+        </table> -->
+        <table>
+            <!-- Table headers -->
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User ID</th>
+                    <th>Restaurant ID</th>
+                    <th>Review</th>
+                    <th>Rating</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <!-- Table body -->
+            <tbody>
+                <tr th:each="reviews : ${reviews}">
+                    <!-- Restaurant details -->
+                    <td th:text="${reviews.id}"></td>
+                    <td th:text="${reviews.user}"></td>
+                    <td th:text="${reviews.res}"></td>
+                    <td th:text="${reviews.reviewtext}"></td>
+                    <td th:text="${reviews.rating}"></td>
+                    </td>
+                    <!-- Actions -->
+                    <td class="actions">
+                        <!-- Link to view/manage menu for the restaurant -->
+                        <a th:href="@{/delete-review/{id}(id=${reviews.id})}" onclick="return confirm('Are you sure you want to delete this reviews?')">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a th:href="@{/add-reviews}" class="add-link">Add Review</a>
+        
         </div>
-        <div class="form-group">
-            <label for="uid">Uid:</label>
-            <input type="text" id="uid" name="uid" th:field="*{uid}" required>
-        </div>
-        <div class="form-group">
-            <label for="rid">Rid:</label>
-            <input type="text" id="rid" name="rid" th:field="*{rid}" required>
-        </div>
-        <div class="form-group">
-            <label for="reviewtext">Reviewtext:</label>
-            <input type="text" id="reviewtext" name="reviewtext" th:field="*{reviewtext}" required>
-        </div>
-        <div class="form-group">
-            <label for="rating">Rating:</label>
-            <input type="text" id="rating" name="rating" th:field="*{rating}" required>
-        </div>
-      
-        <button type="submit" class="btn btn-primary">Save Restaurant</button>
-    </form>
-</body>
-</html>
+        
+        <br>
+
+      <!-- restaurant-manage.html -->
