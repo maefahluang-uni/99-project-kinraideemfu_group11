@@ -9,7 +9,7 @@
 - Clear layout for information presentation.
 
 **2. Search Functionality**
-- Robust search feature for finding restaurants by name.
+-- Robust search feature for finding restaurants by name.
 
 **3. Restaurant Information**
 - Detailed display of restaurant information.
